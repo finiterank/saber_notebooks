@@ -1,0 +1,142 @@
+# ¿Cómo diferencian los exámenes SABER a los colegios públicos y privados?
+
+La pregunta que quisiera abordar es cuáles son las áreas de las pruebas Saber 11 (que evalúan a los estudiantes de último grado de secundaria en Colombia) que mejor se conectan con la naturaleza pública o privada del colegio. Aquí genero dos gráficos preliminares que podrían servir para pensar el problema.
+
+
+```{r}
+library(rpart)
+library(rattle)
+library(ggplot2)
+library(grid)
+library(FactoMineR)
+```
+
+Para empezar, carguemos los promedios por colegio de las pruebas Saber 11 de los años 2011, 2012 y 2013. Disponibles [acá](http://www.icfes.gov.co/resultados/saber-11-resultados?id=39) para descarga. 
+
+```{r}
+saber2013.df <- read.csv("./data/saber2013.csv")
+```
+
+
+```{r}
+nombres.columnas.2011 <- c('Puesto',
+             'Colegio',
+             'Municipio',
+             'Departamento',
+             'naturaleza',
+             'Periodo',
+             'Jornada',
+             'Calendario',
+             'Evaluados',
+             'Promedio_Total',
+             'matematica',
+             'quimica',
+             'fisica',
+             'biologia',
+             'filosofia',
+             'ingles',
+             'lenguaje',
+             'sociales',
+             'DE_Matematica',
+             'DE_Quimica',
+             'DE_Fisica',
+             'DE_Biologia',
+             'DE_Filosofia',
+             'DE_Ingles',
+             'DE_Lenguaje',
+             'DE_Sociales',
+             'CSE_2009')
+saber2011.df <- read.csv("data/saber2011.csv", col.names=nombres.columnas.2011)
+levels(saber2011.df$naturaleza) <- c("OFICIAL", "NO OFICIAL", "OFICIAL")
+```
+
+```{r}
+saber2012.df <- read.csv("data/saber2012.csv")
+colnames(saber2012.df) <- tolower(colnames(saber2012.df))
+colnames(saber2012.df)[colnames(saber2012.df) == "oficial"] <- "naturaleza"
+levels(saber2012.df$naturaleza) <- c("NO OFICIAL", "OFICIAL")
+```
+
+## Árboles de clasificación
+
+En los árboles de clasificación de toma una variable discreta (e.g., "Naturaleza del colegio") y una serie de variables numéricas (e.g., promedios en las diferentes áreas del examen) y se construye un árbol que determine la variable discreta de acuerdo a rangos de valores en las variables numéricas propuestas. El árbol se construye optimizando las divisiones de acuerdo a medidas de homogeneidad. 
+
+```{r}
+
+years = c(2011,2012,2013)
+frames = list(saber2011.df,saber2012.df,saber2013.df)
+
+model1 = as.formula("naturaleza ~ matematica + quimica + fisica + filosofia + sociales + ingles + lenguaje + biologia")
+model2 = as.formula("naturaleza ~ matematica + quimica + fisica + filosofia + sociales + lenguaje + biologia")
+model3 = as.formula("naturaleza ~ matematica + quimica + fisica + filosofia + sociales + biologia")
+
+models = list(model1,model2,model3)
+
+saber.trees <- matrix(list(),3,3)
+for(i in 1:3)
+  {
+  for(j in 1:3)
+    {
+     saber.trees[[i,j]] <- rpart(models[[j]], 
+                                 data=frames[[i]], 
+                                 control=rpart.control(xval=30), 
+                                 method="class")
+    }
+  }
+```
+
+Esta es una gráfica de nueve árboles de clasificación, tres por cada uno de los años. De izquierda a derecha los árboles consideran diferentes conjuntos de áreas. El primero toma todas las áreas. El segundo toma todas las áreas menos inglés (que es el área más fuerte cuando se consideran todas). Y el tercero considera todas las áreas menos inglés y lenguaje (que es la segunda área más fuerte después de inglés). 
+
+```{r fig.width=12, fig.height=9}
+par(mfrow=c(3,3), oma = c(0, 0, 0, 0))
+for(i in 1:3)
+  {
+  for(j in 1:3)
+    {
+    tit <- paste("Árbol", j, sep=" ")
+    tit <- paste(tit, years[i], sep=" - ")
+    fancyRpartPlot(saber.trees[[i,j]], main=tit,  mar=c(0,0.5,3.5,0.5))
+    }
+  }
+```
+
+# Análisis de componentes principales
+
+El análisis de componentes principales es una técnica de estadística descriptiva multivariada que permite aplanar eficientemente espacios de muchas dimensiones. Esto en particular sirve para visualizar datos en muchas dimensiones utilizando apenas un par de ellas. 
+
+
+```{r}
+saber.df <- na.omit(saber2013.df)
+saber.pca <- prcomp(saber.df[,9:16], scale.=TRUE)
+```
+
+Esta es una gráfica del análisis de componentes principales de las áreas de las pruebas. Cada área determina originalmente una dimensión. Gracias al PDA, encontramos un sub-espacio de dos dimensiones donde la distribución de puntos proyectados preserva (hasta cierto punto) la varianza de los datos originales. En el gráfico los colegios públicos son azules y los privados son naranja. También he proyectado el ala positiva de cada una de las diferentes áreas, para que se sepa en qué dirección crecen. Una vez más queda claro que inglés es un área diferenciadora fuertísima. También se puede apreciar cómo la nube de colegios está mayoritariamente por debajo del promedio (el punto (0,0) en el gráfico) en todas las áreas. 
+
+```{r fig.width=12, fig.height=9}
+scores = as.data.frame(saber.pca$x)
+p <- qplot(PC1, PC2, data=scores,   
+      xlab="PC1", 
+      ylab="PC2", color = saber.df$naturaleza, size=I(0.8)) +
+  scale_colour_manual(values=c("orange", "blue"), name = "Tipo de\n Colegio", labels=c("Privado", "Público"))+ theme(plot.background=element_blank(), 
+             panel.background=element_blank())
+p <- p + geom_hline(aes(0), size=.2) + geom_vline(aes(0), size=.2)
+data <- data.frame(obsnames=row.names(saber.pca$x), saber.pca$x)
+datapc <- data.frame(varnames=rownames(saber.pca$rotation), saber.pca$rotation)
+mult <- min(
+        (max(data[,"PC2"]) - min(data[,"PC2"])/(max(datapc[,"PC2"])-min(datapc[,"PC2"]))),
+        (max(data[,"PC1"]) - min(data[,"PC1"])/(max(datapc[,"PC1"])-min(datapc[,"PC1"])))
+        )
+datapc <- transform(datapc,
+                    v1 = 1 * mult * (get("PC1")),
+                    v2 = 1 * mult * (get("PC2"))
+            )
+p <- p + geom_segment(data=datapc, aes(x=0, y=0, xend=v1, yend=v2), arrow=arrow(length=unit(0.2,"cm")), alpha=0.75, color="red")
+p <- p + geom_text(data=datapc, aes(x=v1, y=v2, label=varnames), size = 4.5, vjust=1, color="black")
+p
+```
+
+La importancia de los componentes muestra cómo los dos primeros componentes que usamos en el gráfico explican el 90% de la varianza de los datos originales. 
+
+```{r}
+summary(saber.pca)
+```
