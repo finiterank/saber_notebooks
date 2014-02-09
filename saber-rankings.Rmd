@@ -125,7 +125,7 @@ barplot_mat <- ggplot(saber2013.municipios.df, aes(x=promedio.mat)) +
     geom_density(alpha=.4, fill=colors()[91]) +  
   xlab("Promedio en Matemática") +
   ylab("Proporción de colegios") + 
-  ggtitle("Distribución de Promedios de Matemática\n(Colegios Públicos - Saber 11 - 2013)")
+  ggtitle("Distribución de Promedios de Matemática por Municipio\n(Colegios Públicos - Saber 11 - 2013)")
 
 barplot_mat
 ```
@@ -138,7 +138,7 @@ barplot_leng <- ggplot(saber2013.municipios.df, aes(x=promedio.leng)) +
     geom_density(alpha=.4, fill=colors()[91]) +  
   xlab("Promedio en Lenguaje") +
   ylab("Proporción de colegios") + 
-  ggtitle("Distribución de Promedios de Lenguaje\n(Colegios Públicos - Saber 11 - 2013)")
+  ggtitle("Distribución de Promedios de Lenguaje por Municipio\n(Colegios Públicos - Saber 11 - 2013)")
 
 barplot_leng
 ```
