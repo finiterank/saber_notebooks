@@ -1,0 +1,174 @@
+# Saber por departamentos y municipios
+
+
+
+```{r}
+library(rpart)
+library(rattle)
+library(ggplot2)
+library(grid)
+library(plyr)
+library(FactoMineR)
+library(gridExtra)
+library(maptools)
+library(rgdal)
+```
+
+Para empezar, carguemos los promedios por colegio de las pruebas Saber 11 de 2013, disponibles [acá](http://www.icfes.gov.co/resultados/saber-11-resultados?id=39) para descarga. 
+
+```{r}
+saber2013.df <- read.csv("./data/saber2013.csv")
+saber2013.df$evaluados <- as.numeric(gsub(",","", as.character(saber2013.df$evaluados)))
+```
+
+## Mapa promedios (matemática y lenguaje) colegios públicos 2013
+
+```{r}
+saber2013.df$aporte.matematica <- saber2013.df$matematica * saber2013.df$evaluados
+saber2013.df$aporte.lenguaje <- saber2013.df$lenguaje * saber2013.df$evaluados
+
+saber2013.publicos.df <- saber2013.df[saber2013.df$naturaleza == "OFICIAL",]
+
+# Calculemos de paso el número de colegios públicos
+
+dim(saber2013.publicos.df)
+```
+
+Armemos un nuevo dataframe por municipio que contenga: suma de los aportes de cada colegio y total de estudiantes evaluados.
+
+```{r}
+saber2013.municipios.df <- ddply(saber2013.publicos.df, ~cod_municipio, summarize, aportes.mat = sum(aporte.matematica), aportes.leng = sum(aporte.lenguaje), total.evaluados = sum(evaluados), municipio = municipio[1], departamento = departamento[1])
+```
+
+```{r}
+saber2013.municipios.df$promedio.mat <- saber2013.municipios.df$aportes.mat / saber2013.municipios.df$total.evaluados
+saber2013.municipios.df$promedio.leng <- saber2013.municipios.df$aportes.leng / saber2013.municipios.df$total.evaluados
+```
+
+```{r}
+summary(saber2013.municipios.df)
+```
+
+Carguemos el mapa:
+
+```{r}
+municipios <- readOGR(dsn="./mpio/", layer="mpio")
+municipios@data$id <- rownames(municipios@data)
+
+#Armemos el código de municipio para que quede en el formato apropiado.
+
+municipios@data$codigo_municipio <- as.numeric(gsub(" ", "", paste(municipios@data$DPTO, municipios@data$MPIO)))
+```
+
+```{r}
+municipios.data <- merge(municipios@data, saber2013.municipios.df, by.x="codigo_municipio", by.y="cod_municipio", all.x=T, all.y=F)
+```
+
+```{r}
+deptos <- readOGR(dsn="./depto/", layer="depto")
+levels(deptos@data$DPTO) <- as.numeric(levels(deptos@data$DPTO))
+deptos@data$id <- rownames(deptos@data)
+deptos.df <- fortify(deptos)
+```
+
+```{r}
+municipios.df <- fortify(municipios)
+municipios.df <- join(municipios.df, municipios.data, by="id")
+```
+
+```{r}
+
+th <- theme(axis.text.x = element_blank(), 
+            axis.text.y = element_blank(), 
+            axis.ticks= element_blank(),
+            axis.title=element_blank(),
+            panel.grid.major=element_blank(), 
+            panel.grid.minor=element_blank(), 
+            plot.background=element_blank(), 
+             panel.background=element_blank()
+#             panel.border=element_blank()
+            )
+
+p <- ggplot(data=municipios.df, aes(x=long, y=lat, group=group)) + coord_equal() + th
+p <- p + geom_path(color="white")
+p.mat <- p + geom_polygon(aes(fill=promedio.mat))
+p.mat <- p.mat + scale_fill_gradient(name="Promedio en Matemática\nColegio Públicos\n(Saber 11 - 2013)",
+                               low="#ffffcc", high="#ff4444", 
+                               space="Lab", na.value="grey40",
+                               guide="colourbar")
+p.mat <- p.mat + geom_path(color="white", data=deptos.df, size= 0.2,  aes(x=long, y=lat, group=group))
+
+p.mat
+```
+
+```{r}
+p.leng <- p + geom_polygon(aes(fill=promedio.leng))
+p.leng <- p.leng + scale_fill_gradient(name="Promedio en Lenguaje\nColegio Públicos\n(Saber 11 - 2013)",
+                               low="#ffffcc", high="#ff4444", 
+                               space="Lab", na.value="grey40",
+                               guide="colourbar")
+p.leng <- p.leng + geom_path(color="white", data=deptos.df, size= 0.2,  aes(x=long, y=lat, group=group))
+
+p.leng
+```
+
+```{r}
+mat.leng.municipios <- arrangeGrob(p.mat,p.leng, nrow=1)
+ggsave("./figure/mat.leng.municipios.png", mat.leng.municipios, width=30, height=15)
+```
+
+```{r}
+barplot_mat <- ggplot(saber2013.municipios.df, aes(x=promedio.mat)) + 
+    geom_histogram(aes(y=..density..),      # Histogram with density instead of count on y-axis
+                   binwidth=.5,
+                   colour="black", fill="white") +
+    geom_density(alpha=.4, fill=colors()[91]) +  
+  xlab("Promedio en Matemática") +
+  ylab("Proporción de colegios") + 
+  ggtitle("Distribución de Promedios de Matemática\n(Colegios Públicos - Saber 11 - 2013)")
+
+barplot_mat
+```
+
+```{r}
+barplot_leng <- ggplot(saber2013.municipios.df, aes(x=promedio.leng)) + 
+    geom_histogram(aes(y=..density..),      # Histogram with density instead of count on y-axis
+                   binwidth=.5,
+                   colour="black", fill="white") +
+    geom_density(alpha=.4, fill=colors()[91]) +  
+  xlab("Promedio en Lenguaje") +
+  ylab("Proporción de colegios") + 
+  ggtitle("Distribución de Promedios de Lenguaje\n(Colegios Públicos - Saber 11 - 2013)")
+
+barplot_leng
+```
+
+```{r}
+distribuciones.mat.leng <- arrangeGrob(barplot_mat,barplot_leng, nrow=1)
+ggsave("./figure/dist.mat.leng.municipios.png", distribuciones.mat.leng, width=30, height=15)
+```
+
+
+```{r}
+ranking.mat <- saber2013.municipios.df[with(saber2013.municipios.df, order(-promedio.mat, municipio)), ]
+ranking.leng <- saber2013.municipios.df[with(saber2013.municipios.df, order(-promedio.leng, municipio)),]
+```
+
+```{r}
+top50.mat <- ranking.mat[1:50,]
+cat(paste(1:50, top50.mat$municipio, "(", top50.mat$departamento, ") Puntaje:", round(top50.mat$promedio.mat,2), "\n"))
+```
+
+
+```{r}
+top50.leng <- ranking.leng[1:50,]
+cat(paste(1:50, top50.leng$municipio, "(", top50.leng$departamento, ") Puntaje:", round(top50.leng$promedio.leng,2), "\n"))
+```
+
+```{r}
+cremedelacreme <- intersect(top50.mat$cod_municipio, top50.leng$cod_municipio)
+top.publicos <- saber2013.municipios.df[saber2013.municipios.df$cod_municipio %in% cremedelacreme,]
+top.publicos <- top.publicos[with(top.publicos, order(-promedio.mat, -promedio.leng)),]
+cat(paste(1:nrow(top.publicos), top.publicos$municipio, "(", top.publicos$departamento, ") Puntaje Matemática:", round(top.publicos$promedio.mat,2), "Puntaje Lenguaje:", round(top.publicos$promedio.leng,2), "\n"))
+```
+

@@ -1,0 +1,21 @@
+1 LA UNION ( NARIÑO ) Puntaje Matemática: 58.54 Puntaje Lenguaje: 48.88
+2 SAN JOSE DE MIRANDA ( SANTANDER ) Puntaje Matemática: 53.83 Puntaje Lenguaje: 51.52
+3 IZA ( BOYACÁ ) Puntaje Matemática: 52.25 Puntaje Lenguaje: 49.75
+4 CONCEPCION ( SANTANDER ) Puntaje Matemática: 50.08 Puntaje Lenguaje: 49.65
+5 BUCARAMANGA ( SANTANDER ) Puntaje Matemática: 49.86 Puntaje Lenguaje: 50.02
+6 MALAGA ( SANTANDER ) Puntaje Matemática: 49.72 Puntaje Lenguaje: 49.4
+7 DUITAMA ( BOYACÁ ) Puntaje Matemática: 49.57 Puntaje Lenguaje: 49.48
+8 ENTRERRIOS ( ANTIOQUIA ) Puntaje Matemática: 49.41 Puntaje Lenguaje: 50.63
+9 CHARALA ( SANTANDER ) Puntaje Matemática: 49.08 Puntaje Lenguaje: 49.81
+10 CERINZA ( BOYACÁ ) Puntaje Matemática: 48.97 Puntaje Lenguaje: 50.69
+11 PAIPA ( BOYACÁ ) Puntaje Matemática: 48.84 Puntaje Lenguaje: 50.08
+12 TUNJA ( BOYACÁ ) Puntaje Matemática: 48.77 Puntaje Lenguaje: 49.9
+13 SOGAMOSO ( BOYACÁ ) Puntaje Matemática: 48.69 Puntaje Lenguaje: 49.59
+14 SAN GIL ( SANTANDER ) Puntaje Matemática: 48.5 Puntaje Lenguaje: 48.93
+15 BARICHARA ( SANTANDER ) Puntaje Matemática: 48.28 Puntaje Lenguaje: 49.02
+16 SAN EDUARDO ( BOYACÁ ) Puntaje Matemática: 48.25 Puntaje Lenguaje: 51
+17 LA CEJA ( ANTIOQUIA ) Puntaje Matemática: 48.19 Puntaje Lenguaje: 49.94
+18 CAMPOHERMOSO ( BOYACÁ ) Puntaje Matemática: 48.14 Puntaje Lenguaje: 50.24
+19 IPIALES ( NARIÑO ) Puntaje Matemática: 47.85 Puntaje Lenguaje: 49.07
+20 CHIA ( CUNDINAMARCA ) Puntaje Matemática: 47.48 Puntaje Lenguaje: 49.36
+21 FLORIDABLANCA ( SANTANDER ) Puntaje Matemática: 47.44 Puntaje Lenguaje: 49.09
