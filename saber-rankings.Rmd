@@ -144,10 +144,16 @@ barplot_leng
 ```
 
 ```{r}
-distribuciones.mat.leng <- arrangeGrob(barplot_mat,barplot_leng, nrow=1)
-ggsave("./figure/dist.mat.leng.municipios.png", distribuciones.mat.leng, width=30, height=15)
+distribuciones.mat.leng <- arrangeGrob(barplot_mat,barplot_leng, nrow=2)
+ggsave("./figure/dist.mat.leng.municipios.png", distribuciones.mat.leng, width=15, height=30)
 ```
 
+```{r}
+mat.leng <- arrangeGrob(p.mat, barplot_mat, p.leng, barplot_leng, nrow=2)
+ggsave("./figure/distribuciones-promedios.png", mat.leng, width=20, height=20)
+```
+
+p.mat,p.leng
 
 ```{r}
 ranking.mat <- saber2013.municipios.df[with(saber2013.municipios.df, order(-promedio.mat, municipio)), ]
@@ -156,19 +162,19 @@ ranking.leng <- saber2013.municipios.df[with(saber2013.municipios.df, order(-pro
 
 ```{r}
 top50.mat <- ranking.mat[1:50,]
-cat(paste(1:50, top50.mat$municipio, "(", top50.mat$departamento, ") Puntaje:", round(top50.mat$promedio.mat,2), "\n"))
+write(paste(1:50, top50.mat$municipio, "(", top50.mat$departamento, ") Puntaje:", round(top50.mat$promedio.mat,2)), file="output_files/top50.mat.txt", sep="\n")
 ```
 
 
 ```{r}
 top50.leng <- ranking.leng[1:50,]
-cat(paste(1:50, top50.leng$municipio, "(", top50.leng$departamento, ") Puntaje:", round(top50.leng$promedio.leng,2), "\n"))
+write(paste(1:50, top50.leng$municipio, "(", top50.leng$departamento, ") Puntaje:", round(top50.leng$promedio.leng,2)), file="output_files/top50.leng.txt", sep="\n")
 ```
 
 ```{r}
 cremedelacreme <- intersect(top50.mat$cod_municipio, top50.leng$cod_municipio)
 top.publicos <- saber2013.municipios.df[saber2013.municipios.df$cod_municipio %in% cremedelacreme,]
 top.publicos <- top.publicos[with(top.publicos, order(-promedio.mat, -promedio.leng)),]
-cat(paste(1:nrow(top.publicos), top.publicos$municipio, "(", top.publicos$departamento, ") Puntaje Matemática:", round(top.publicos$promedio.mat,2), "Puntaje Lenguaje:", round(top.publicos$promedio.leng,2), "\n"))
+write(paste(1:nrow(top.publicos), top.publicos$municipio, "(", top.publicos$departamento, ") Puntaje Matemática:", round(top.publicos$promedio.mat,2), "Puntaje Lenguaje:", round(top.publicos$promedio.leng,2)), file="output_files/top.publicos.txt", sep="\n")
 ```
 
