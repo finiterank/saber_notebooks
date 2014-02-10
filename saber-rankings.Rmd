@@ -220,5 +220,5 @@ ranking <- ranking.leng[,c('municipio', 'departamento', 'promedio.mat', 'promedi
 names(ranking) <- c('Municipio', 'Departamento', 'Matemática', 'Lenguaje', 'Evaluados')
 ranking$Matemática <- round(ranking$Matemática, 2)
 ranking$Lenguaje <- round(ranking$Lenguaje, 2)
-write.csv(ranking, file="~/Documents/GitHubPages/informe/app/rank.csv", row.names=FALSE)
+write.csv(ranking, file="rank.csv", row.names=FALSE)
 ```
