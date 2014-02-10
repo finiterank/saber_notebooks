@@ -40,7 +40,7 @@ function imprimirTabla(ta, inicio, fin, seleccionado){
 	output = output.concat('<tbody>');
 	for(var j=inicio;j<=fin;j++){
 		if(j === seleccionado) {
-			output = output.concat('<tr class="active">');
+			output = output.concat('<tr class="success">');
 		}
 		else {
 			output = output.concat('<tr>');
