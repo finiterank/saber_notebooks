@@ -144,6 +144,25 @@ barplot_leng
 ```
 
 ```{r}
+barplot_evaluados <- ggplot(saber2013.municipios.df, aes(x=total.evaluados)) + 
+      geom_density(alpha=.7, fill=colors()[91]) + 
+      scale_x_log10() +
+  xlab("Número de evaluados") +
+  ylab("Proporción de colegios") + 
+  ggtitle("Distribución de número de evaluados por municipio\n(Colegios Públicos - Saber 11 - 2013)")
+
+barplot_evaluados
+```
+
+```{r}
+ggsave("./figure/dist.evaluados.municipios.png", barplot_evaluados, width=10, height=10)
+```
+
+```{r}
+median(saber2013.municipios.df$total.evaluados)
+```
+
+```{r}
 distribuciones.mat.leng <- arrangeGrob(barplot_mat,barplot_leng, nrow=2)
 ggsave("./figure/dist.mat.leng.municipios.png", distribuciones.mat.leng, width=15, height=30)
 ```
@@ -175,6 +194,31 @@ write(paste(1:50, top50.leng$municipio, "(", top50.leng$departamento, ") Puntaje
 cremedelacreme <- intersect(top50.mat$cod_municipio, top50.leng$cod_municipio)
 top.publicos <- saber2013.municipios.df[saber2013.municipios.df$cod_municipio %in% cremedelacreme,]
 top.publicos <- top.publicos[with(top.publicos, order(-promedio.mat, -promedio.leng)),]
-write(paste(1:nrow(top.publicos), top.publicos$municipio, "(", top.publicos$departamento, ") Puntaje Matemática:", round(top.publicos$promedio.mat,2), "Puntaje Lenguaje:", round(top.publicos$promedio.leng,2)), file="output_files/top.publicos.txt", sep="\n")
+write(paste(1:nrow(top.publicos), ") ", top.publicos$municipio, " (", top.publicos$departamento, ") \n   Puntaje Matemática: ", round(top.publicos$promedio.mat,2), "\n   Puntaje Lenguaje: ", round(top.publicos$promedio.leng,2), sep=""), file="output_files/top.publicos.txt", sep="\n")
 ```
 
+```{r}
+top110.mat <- ranking.mat[1:110,]
+write(paste(1:110, ") ", top110.mat$municipio, " (", top110.mat$departamento, ") Puntaje: ", round(top110.mat$promedio.leng,2), " Número de estudiantes: ", top110.mat$total.evaluados, sep=""), file="", sep="\n")
+```
+
+
+```{r}
+top110.leng <- ranking.leng[1:110,]
+write(paste(1:110, ") ", top110.leng$municipio, " (", top110.leng$departamento, ") Puntaje: ", round(top110.leng$promedio.leng,2), " Número de estudiantes: ", top110.leng$total.evaluados, sep=""), file="", sep="\n")
+```
+
+```{r}
+toponepercent <- intersect(top110.mat$cod_municipio, top110.leng$cod_municipio)
+mejores.publicos <- saber2013.municipios.df[saber2013.municipios.df$cod_municipio %in% toponepercent,]
+mejores.publicos <- mejores.publicos[with(mejores.publicos, order(-promedio.mat, -promedio.leng)),]
+write(paste(1:nrow(mejores.publicos), ") ", mejores.publicos$municipio, " (", mejores.publicos$departamento, ") \n   Puntaje Matemática: ", round(mejores.publicos$promedio.mat,2), "\n   Puntaje Lenguaje: ", round(mejores.publicos$promedio.leng,2), " Número de estudiantes: ", mejores.publicos$total.evaluados, sep=""), file="output_files/mejores.publicos.txt", sep="\n")
+```
+
+```{r}
+ranking <- ranking.leng[,c('municipio', 'departamento', 'promedio.mat', 'promedio.leng', 'total.evaluados')]
+names(ranking) <- c('Municipio', 'Departamento', 'Matemática', 'Lenguaje', 'Evaluados')
+ranking$Matemática <- round(ranking$Matemática, 2)
+ranking$Lenguaje <- round(ranking$Lenguaje, 2)
+write.csv(ranking, file="~/Documents/GitHubPages/informe/app/rank.csv", row.names=FALSE)
+```
