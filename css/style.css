@@ -5,7 +5,7 @@ body{font-family: 'Bitter', serif; color:#555;}
 
 
 #titulo-reporte{padding:0;}
-.texto{font-size:1.2em;}
+.texto p {font-size:1.2em;}
 header {display:block;
 	margin:0 0 20px 0;
 	padding:0;
