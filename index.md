@@ -6,7 +6,7 @@ layout: reporte
 <div id="titulo-reporte" class="container-fluid">
 <header>
 <img src="pics/la_union.jpg">
-<h1>Municipios y Pruebas Saber 11<small>Un sobrevuelo de los resultados en 2013</small></h1>
+<h1>Municipios y Pruebas Saber 11</h1>
 </header>
 </div>
 
