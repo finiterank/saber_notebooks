@@ -40,9 +40,13 @@ layout: reporte
 <div class="col-md-4 caption"></div>
 <div class="col-md-8 texto">
 <img src="pics/dist.mat.leng.municipios.png">
-<p>Esta es una prueba de texto.</p>
+<p>Los resultados en matemática se concentran hacia la izquierda, en los puntajes bajos, y los de lenguaje hacia la derecha, en los puntajes más altos. Esto sugiere que a los estudiantes les va mejor en lenguaje que en matemática. El efecto de esta disparidad es evidente cuando se colorean los municipios en el mapa de acuerdo a su puntaje en cada una de las dos areas:</p>
 </div>
 </div>
+<div class="row">
+<div class="col-md-12 texto"><img src="pics/mat.leng.municipios.png"></div>
+</div>
+
 
 <div class="row">
 <div class="col-md-4 caption"><small><h2>Busque su municipio</h2>
