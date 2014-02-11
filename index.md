@@ -6,7 +6,7 @@ layout: reporte
 <div id="titulo-reporte" class="container-fluid">
 <header>
 <img src="pics/la_union.jpg">
-<h1>Los más educados<br><small>Un sobrevuelo de Saber 11 a nivel municipal</small></h1>
+<h1>Los más educados<br><small>Un sobrevuelo de Saber 11 (2013) a nivel municipal</small></h1>
 </header>
 </div>
 
