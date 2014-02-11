@@ -22,7 +22,7 @@ layout: reporte
 
 <p>Hace un año largo escribí <a href="http://www.elespectador.com/opinion/columna-389967-saber-y-perder">una columna para <em>El Espectador</em></a> donde explicaba cómo <a href="http://nbviewer.ipython.org/url/finiterank.com/saber/saber.ipynb">un análisis estadístico sencillo</a> demuestra que en realidad los colegios públicos y los colegios privados en Colombia no se diferencian sustancialmente en cuanto a resultados en Saber. La lista de los mejores colegios está determinada, más que nada, por <a href="http://www.finiterank.com/notas/2013/12/19/19/">el nivel de ingresos</a> de las familias de sus estudiantes.</p>
 
-<h2>Públicos
+<h2>Educación pública</h2>
 
 <p>En este pequeño reporte, basado en una idea de Jorge Orlando Melo, quiero concentrarme en los resultados de las pruebas Saber 11 del año 2013 a nivel municipal y restringirme, adicionamente, a los resultados en colegios públicos.</p> 
 
