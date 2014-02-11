@@ -1,3 +1,5 @@
-name: Tabla de Municipios 
-markdown: redcarpet
+name: "Tabla de Municipios"
+
+markdown: rdiscount
+permalink: pretty
 pygments: true
