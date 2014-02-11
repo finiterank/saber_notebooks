@@ -1,4 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Bowlby+One);
 
 body{font-family: 'Bitter', serif;}
 
@@ -20,6 +21,7 @@ header {display:block;
 header img{width:100%;}
 
 header h1 {position:absolute;
+	font-family: 'Bowlby One', cursive;
 	bottom:10%;
 	right:5%;
 	text-align:right;
@@ -30,5 +32,6 @@ header h1 {position:absolute;
 	-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;
 	transition:all 0.2s ease-in-out}
 
-header h1 small{color:#ddd;
+header h1 small{color:#f1f1f1;
+				font-family: 'Bitter', serif;
 				font-size:.5em;}
