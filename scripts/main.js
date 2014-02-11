@@ -96,7 +96,67 @@ function generateTable() {
 	});
 }
 
+function generateTableMat() {
+	'use strict';
+	var tabla = {};
+	var nombres = {};
+	$.get('rank.mat.csv', function(csvString) {
+	    var lineasTabla = csvString.split(/\r\n|\n/);
+	    var titulos = lineasTabla[0].split(',');
+	    var n = titulos.length;
+		tabla.tit = titulos;
+	    tabla.len = lineasTabla.length;
+	    for(var i=1; i<lineasTabla.length; i++) {
+	        var fila = lineasTabla[i].split(',');
+	        tabla[i] = {};
+	        nombres[fila[0]+', '+fila[1]] = i;
+	        for (var j=0; j<= n; j++){
+	            tabla[i][titulos[j]] = fila[j];
+	        }
+	    }
+	    var tablaHTML = imprimirTabla(tabla, 1,10,0);
+		$('#tabla-matematica').append(tablaHTML);
+	    $('#topx').change(function(){
+            var v = Number(this.value);
+            var t = imprimirTabla(tabla, 1,v,0);
+            $('#tabla-matematica').empty(t);
+            $('#tabla-matematica').append(t);
+        });
+	});
+}
+
+function generateTableLeng() {
+	'use strict';
+	var tabla = {};
+	var nombres = {};
+	$.get('rank.leng.csv', function(csvString) {
+	    var lineasTabla = csvString.split(/\r\n|\n/);
+	    var titulos = lineasTabla[0].split(',');
+	    var n = titulos.length;
+		tabla.tit = titulos;
+	    tabla.len = lineasTabla.length;
+	    for(var i=1; i<lineasTabla.length; i++) {
+	        var fila = lineasTabla[i].split(',');
+	        tabla[i] = {};
+	        nombres[fila[0]+', '+fila[1]] = i;
+	        for (var j=0; j<= n; j++){
+	            tabla[i][titulos[j]] = fila[j];
+	        }
+	    }
+	    var tablaHTML = imprimirTabla(tabla, 1,10,0);
+		$('#tabla-lenguaje').append(tablaHTML);
+	    $('#topx').change(function(){
+            var v = Number(this.value);
+            var t = imprimirTabla(tabla, 1,v,0);
+            $('#tabla-lenguaje').empty(t);
+            $('#tabla-lenguaje').append(t);
+        });
+	});
+}
+
 $(document).ready(function() {
 	'use strict';
+	generateTableMat();
+	generateTableLeng();
 	generateTable();
 });

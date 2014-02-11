@@ -51,7 +51,16 @@ layout: reporte
 <div class="col-md-4 caption"></div>
 <div class="col-md-8 texto">
 <h2>Los más</h2>
-<p>La pregunta obvia ante los mapas es cuáles son los municipios que se destacan por sus promedios altos en cada una de las dos áreas. ¿Hay algún patrón? ¿Puntos de acumulación? ¿Son municipios más ricos o más pequeños en general? No es tan claro. Una primera observación rápida es que el punto más intenso en ambos se encuentra al suroccidente, en el departamento de Nariño.</p>
+<p>La pregunta obvia ante los mapas es cuáles son los municipios que se destacan por sus promedios altos en cada una de las dos áreas. ¿Hay algún patrón? ¿Puntos de acumulación? ¿Son municipios más ricos o más pequeños en general? No es tan claro. Una primera observación rápida es que el punto más intenso en ambos se encuentra al suroccidente, en el departamento de Nariño. Se trata de La Unión, un lugar del que nunca había oído hablar hasta que calculé estas tablas.</p>
+</div>
+</div>
+
+<div class="row">
+<div class="col-md-6">
+<div id="tabla-matematica"></div>
+</div>
+<div class="col-md-6">
+<div id="tabla-lenguaje"></div>
 </div>
 </div>
 
