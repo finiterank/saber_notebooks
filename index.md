@@ -37,7 +37,7 @@ layout: reporte
 </div>
 
 <div class="row">
-<div class="col-md-4 caption"><small>Esta es una prueba de comentario a la figura.</small></div>
+<div class="col-md-4 caption"></div>
 <div class="col-md-8 texto">
 <img src="pics/dist.mat.leng.municipios.png">
 <p>Esta es una prueba de texto.</p>
