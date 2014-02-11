@@ -10,9 +10,13 @@ layout: reporte
 </header>
 </div>
 
+
 <div class="container">
 <div class="row">
-<div class="col-md-12">
+<div class="col-md-4">
+	<small><em>Panorámica de La Unión, Nariño</em></small>
+</div>
+<div class="col-md-8">
 
 <h2>Busque su municipio:</h2>
 
