@@ -1,3 +1,17 @@
 @import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
 
 body{font-family: 'Bitter', serif;}
+#titulo-reporte{padding:0;}
+header img{width:100%;}
+
+header h1 {position:absolute;
+	bottom:10%;
+	right:5%;
+	text-align:right;
+	width:100%;
+	color:#FFF;font-size:3em;
+	font-weight:200; 
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;
+	transition:all 0.2s ease-in-out}
+
