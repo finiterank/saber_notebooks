@@ -30,3 +30,5 @@ header h1 {position:absolute;
 	-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;
 	transition:all 0.2s ease-in-out}
 
+header h1 small{color:#bbb;
+				font-size:1em;}
