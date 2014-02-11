@@ -16,7 +16,7 @@ layout: reporte
 <div class="col-md-4">
 	<small><em>Panorámica de <a href="http://www.launion-narino.gov.co/index.shtml">La Unión, Nariño</a></em><br>Fuente: <a href="http://commons.wikimedia.org/wiki/File:Vista_de_la_union_nari%C3%B1o.JPG">Wikimedia Commons</a></small>
 </div>
-<div class="col-md-8">
+<div class="col-md-8 texto">
 
 <p>Cada noviembre el ICFES publica los resultados de las pruebas Saber 11 a nivel de colegios. Basados en esos resultados se divulgan en los medios listas de "los mejores colegios" y se reiteran en columnas de opinión las mismas quejas y acusaciones sobre la calidad de la educación pública debido a su casi total ausencia en las listas de los primeros cien colegios (en una lista de cerca de doce mil). Esto es como quejarse de la estatura de los colombianos basándose en estudiar las tallas de los jugadores de Los Piratas de Bogotá. Hace un par de años escribí una columna para El Espectador donde explicaba cómo un análisis estadístico sencillo demuestra que en realidad los colegios públicos y los colegios privados en Colombia no se diferencian sustancialmente en cuanto a resultados en Saber (esto también se puede corroborar estudiando los resultados de las pruebas Pisa). La lista de los mejores colegios está determinada, más que por la naturaleza estatal o no del colegio, por el nivel de ingresos de las familias de sus estudiantes. </p>
 
