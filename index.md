@@ -6,7 +6,7 @@ layout: reporte
 <div id="titulo-reporte" class="container-fluid">
 <header>
 <img src="pics/la_union.jpg">
-<h1>Municipios y Pruebas Saber 11</h1>
+<h1>Los más educados<br><small>Un sobrevuelo de las pruebas Saber 11 a nivel municipal</small></h1>
 </header>
 </div>
 
