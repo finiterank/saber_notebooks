@@ -44,7 +44,8 @@ layout: reporte
 </div>
 </div>
 <div class="row">
-<div class="col-md-12 texto"><img src="pics/mat.leng.municipios.png"></div>
+<div class="col-md-12 texto"><img src="pics/mat.leng.municipios.png">
+</div>
 </div>
 
 
