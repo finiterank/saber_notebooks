@@ -114,7 +114,7 @@ function generateTableMat() {
 	            tabla[i][titulos[j]] = fila[j];
 	        }
 	    }
-	    var tablaHTML = imprimirTabla(tabla, 1,10,0);
+	    var tablaHTML = imprimirTabla(tabla, 1,15,0);
 		$('#tabla-matematica').append(tablaHTML);
 	    $('#topx').change(function(){
             var v = Number(this.value);
@@ -143,7 +143,7 @@ function generateTableLeng() {
 	            tabla[i][titulos[j]] = fila[j];
 	        }
 	    }
-	    var tablaHTML = imprimirTabla(tabla, 1,10,0);
+	    var tablaHTML = imprimirTabla(tabla, 1,15,0);
 		$('#tabla-lenguaje').append(tablaHTML);
 	    $('#topx').change(function(){
             var v = Number(this.value);
