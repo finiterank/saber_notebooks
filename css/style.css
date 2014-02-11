@@ -2,6 +2,8 @@
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
 
 body{font-family: 'Bitter', serif; color:#555;}
+a {color:#d45500;}
+a:visited {color: #d45500;}
 
 
 #titulo-reporte{padding:0;}
