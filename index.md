@@ -25,8 +25,12 @@ layout: reporte
 <p>En este pequeño reporte, basado en una idea de Jorge Orlando Melo, quiero concentrarme en los resultados de las pruebas Saber 11 del año 2013 a nivel municipal y restringirme, adicionamente, a los resultados en colegios públicos.</p> 
 
 <p>Una razón para justificar esta restricción es que la mayoría de los jóvenes colombianos estudian en colegios públicos. En 2013, el Icfes evaluó las competencias de 574.129 estudiantes de último grado de bachillerato. De estos, un 72,3% estudiaba en colegios públicos. Otra razón es política: los colegios públicos son una de las principales herramientas de las entidades estatales para promover movilidad social y desarrollo. Su desempeño debería ser una preocupación permanente a todos los niveles del estado, arrancando por los municipios.</p>
+</div>
+</div>
 
-
+<div class="row">
+<div class="col-md-4"><small>Seleccione su municipio para ver su posición en la lista (ordenada usando como índice el promedio de los resultados en matemática y lenguaje) así como cinco municipios justo por debajo y justo por encima del elegido.</small></div>
+<div class="col-md-8">
 <h2>Busque su municipio:</h2>
 
 <div id="formulario"></div>
