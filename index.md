@@ -32,7 +32,7 @@ layout: reporte
 
 <h2>Números y letras</h2>
 
-Adicionalmente, para simplificar, me enfoco en los resultados en matemática y lenguaje, las áreas centrales del núcleo educativo. En el gráfico a continuación presento las distribución de frecuencias para cada una de las dos áres a nivel municipal:
+<p>Adicionalmente, para simplificar, me enfoco en los resultados en matemática y lenguaje, las áreas centrales del núcleo educativo. En el gráfico a continuación presento las distribución de frecuencias para cada una de las dos áres a nivel municipal:</p>
 </div>
 </div>
 
