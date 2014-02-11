@@ -28,10 +28,11 @@ header h1 {position:absolute;
 	width:100%;
 	color:#FFF;font-size:5em;
 	font-weight:200; 
+	line-height: .8em;
 	-webkit-transition:all 0.2s ease-in-out;
 	-moz-transition:all 0.2s ease-in-out;-o-transition:all 0.2s ease-in-out;
 	transition:all 0.2s ease-in-out}
 
 header h1 small{color:#f1f1f1;
 				font-family: 'Bitter', serif;
-				font-size:.5em;}
+				font-size:.2em;}
