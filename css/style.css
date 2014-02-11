@@ -1,5 +1,5 @@
 @import url(http://fonts.googleapis.com/css?family=Bitter:400,700,400italic);
-@import url(http://fonts.googleapis.com/css?family=Source+Sans+Pro:900);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:600);
 
 body{font-family: 'Bitter', serif; color:#555;}
 
@@ -21,7 +21,7 @@ header {display:block;
 header img{width:100%;}
 
 header h1 {position:absolute;
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 	bottom:10%;
 	right:5%;
 	text-align:right;
