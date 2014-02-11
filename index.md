@@ -14,7 +14,7 @@ layout: reporte
 <div class="container">
 <div class="row">
 <div class="col-md-4">
-	<small><em>Panorámica de La Unión, Nariño</em></small>
+	<small><em>Panorámica de <a href="http://www.launion-narino.gov.co/index.shtml">La Unión, Nariño</a></em><br>Fuente: <a href="http://commons.wikimedia.org/wiki/File:Vista_de_la_union_nari%C3%B1o.JPG">Wikimedia Commons</a></small>
 </div>
 <div class="col-md-8">
 
