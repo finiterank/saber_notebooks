@@ -65,10 +65,11 @@ layout: reporte
 </div>
 
 <div class="row">
-<div class="col-md-4 caption"><small><h2>Busque su municipio</h2>
-<div id="formulario"></div>
+<div class="col-md-4 caption"><small>
+<div id="formulario" style="margin-top:2em;"></div>
 Seleccione su municipio para ver su posición en la lista (ordenada usando como índice el promedio de los resultados en matemática y lenguaje) así como cinco municipios justo por debajo y justo por encima del que elija. La tabla completa está disponible para descarga <a href="https://docs.google.com/spreadsheet/ccc?key=0AnK0b1-vFIdcdHNWbFN2N2NKNWtUSjJJcS1tT3R1THc&usp=sharing#gid=0">acá</a>.</small></div>
 <div class="col-md-8">
+<h2>Busque su municipio</h2>
 <div id="tabla-resultados"></div>
 </div>
 </div>
