@@ -18,7 +18,7 @@ layout: reporte
 </div>
 <div class="col-md-8 texto">
 
-<center>DOCUMENTO EN DESARROLLO TABLA DE MUNICIPIOS AL FINAL</center>
+<center><br<br>DOCUMENTO EN DESARROLLO <br>TABLA DE MUNICIPIOS AL FINAL<br><br></center>
 
 <p>Cada noviembre el ICFES publica <a href="http://www.icfes.gov.co/resultados/saber-11-resultados?id=39">los resultados de las pruebas Saber 11 a nivel de colegios</a>. Basados en esos resultados se divulgan en los medios listas de "los mejores colegios" y se reiteran en columnas de opinión las mismas letanías sobre la calidad de la educación pública debido a su casi total ausencia en las listas de los primeros cien colegios (en una lista de cerca de doce mil). </p>
 
@@ -47,7 +47,13 @@ layout: reporte
 <div class="col-md-12 texto"><img src="pics/mat.leng.municipios.png">
 </div>
 </div>
-
+<div class="row">
+<div class="col-md-4 caption"></div>
+<div class="col-md-8 texto">
+<h2>Los más</h2>
+La pregunta obvia ante los mapas es cuáles son los municipios que se destacan por sus promedios altos en cada una de las dos áreas. ¿Hay algún patrón? ¿Puntos de acumulación? ¿Son municipios más ricos o más pequeños en general? No es tan claro. Una primera observación rápida es que el punto más intenso en ambos se encuentra al sur occidente, en el departamento de Nariño.
+</div>
+</div>
 
 <div class="row">
 <div class="col-md-4 caption"><small><h2>Busque su municipio</h2>
