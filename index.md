@@ -29,7 +29,7 @@ layout: reporte
 </div>
 
 <div class="row">
-<div class="col-md-4"><small><h2>Busque su municipio</h2>
+<div class="col-md-4 caption"><small><h2>Busque su municipio</h2>
 
 Seleccione su municipio para ver su posición en la lista (ordenada usando como índice el promedio de los resultados en matemática y lenguaje) así como cinco municipios justo por debajo y justo por encima del elegido.</small></div>
 <div class="col-md-8">
