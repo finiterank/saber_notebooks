@@ -86,11 +86,13 @@ layout: reporte
 
 <h2>¿Suerte?</h2>
 
-<p>Por supuesto, siempre existe la posibilidad de que no haya patrón ni secreto del éxito y el alto promedio de un año sea simple cuestión de suerte. Para estudiar esta posibilidad tomemos los resultados de las pruebas Saber de 2011 y, de nuevo, restrinjámonos a los promedios de colegios públicos por municipio en matemática y lenguaje.</p>
+<p>Por supuesto, siempre existe la posibilidad de que no haya patrón ni secreto del éxito y el alto promedio de un año sea simple cuestión de suerte. Para estudiar esta posibilidad tomemos los resultados de las pruebas Saber de 2011 y, de nuevo, restrinjámonos a los promedios de colegios públicos por municipio en matemática y lenguaje. <a href="https://docs.google.com/spreadsheet/ccc?key=0AnK0b1-vFIdcdHR1UjRLaFlTdXBkOGI1V0hlMG5GUWc&usp=sharing">Aquí está la tabla resultante</a> por si quieren jugar con ella.</p>
 
 <p>En 2013 hay 56 municipios que están simultáneamente en el primer decil de matemática y el primer decil de lenguaje. Por casualidad, lo mismo es cierto al respecto de 2011. Hasta ahí todo bien: no es de sorprenderse que una proporción alta esté en ambas listas pues hay alta correlación entre los resultados de todas las áreas de las pruebas. Ahora la pregunta es qué tan parecidas son estas dos listas. Al intersectarlas descubrí que comparten veintidós municipios. Esto es: hay veintidós municipios que ocupan el primer decil en matemática y lenguaje tanto en 2011 como en 2013. Estos son: San Jose de Miranda (Santander), Paicol (Huila), Malaga (Santander), San Gil (Santander), Charalá (Santander), Paipa (Boyacá), Envigado (Antioquia), Bucaramanga (Santander), Sogamoso (Boyacá), La Ceja (Antioquia), Duitama (Boyacá), Tunja (Boyacá), Barichara (Santander), Guachucal (Nariño), Floridablanca (Santander), Entrerrios (Antioquia), Chía (Cundinamarca), Chinacota (Norte de Santander), Aguada (Santander), Pamplona (Norte Santander), Ipiales (Nariño) y Pasto (Nariño).</p>
 
 <p>Vuelven la preguntas: ¿Qué están haciendo bien? ¿Con qué ventajas cuentan? ¿Son modelos que se pueden imitar? ¿Cuál es el secreto de Tunja, Bucaramanga y Pasto?</p>
+
+<p>Otra pregunta: ¿Por qué cada año no se otorga un reconocimiento a los municipios con buenos resultados en sus colegios públicos? ¿Por qué no se presiona a las alcaldías para que se sientan responsables de los resultados que obtienen sus colegios?</p>
 </div>
 </div>
 </div>
