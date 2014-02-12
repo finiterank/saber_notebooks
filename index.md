@@ -93,6 +93,8 @@ layout: reporte
 <p>Vuelven la preguntas: ¿Qué están haciendo bien? ¿Con qué ventajas cuentan? ¿Son modelos que se pueden imitar? ¿Cuál es el secreto de Tunja, Bucaramanga y Pasto?</p>
 
 <p>Otra pregunta: ¿Por qué cada año no se otorga un reconocimiento a los municipios con buenos resultados en sus colegios públicos? ¿Por qué no se presiona a las alcaldías para que se sientan responsables de los resultados que obtienen sus colegios?</p>
+
+<p>Si este fuera un reportaje serio aquí vendría una crónica de la visita a los colegios (¿o el colegio?) en San José de Miranda, Santander, o tal vez una conversación con los secretarios de educación de Paicol, Huila, Guachucal, Nariño, y Tunja, Boyacá.</p>
 </div>
 </div>
 </div>
