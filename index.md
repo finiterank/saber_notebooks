@@ -16,9 +16,6 @@ layout: reporte
 <div class="col-md-4 caption">
 	<small>Panorámica de <a href="http://www.launion-narino.gov.co/index.shtml">La Unión, Nariño</a>, el municipio con el mejor promedio en matemática en colegios públicos en 2013.<p class="text-right">(Fuente: <a href="http://commons.wikimedia.org/wiki/File:Vista_de_la_union_nari%C3%B1o.JPG">Wikimedia Commons</a>)</p></small></div>
 <div class="col-md-8 texto">
-
-<center><br<br>DOCUMENTO EN DESARROLLO <br>TABLA DE MUNICIPIOS AL FINAL<br><br></center>
-
 <p>Cada noviembre el ICFES publica <a href="http://www.icfes.gov.co/resultados/saber-11-resultados?id=39">los resultados de las pruebas Saber 11 a nivel de colegios</a>. Basados en esos resultados se divulgan en los medios listas de "los mejores colegios" y se reiteran en columnas de opinión los mismos lamentos sobre la calidad de la educación pública debido a su casi total ausencia en las listas de los primeros cien colegios (en una lista de cerca de doce mil). </p>
 
 <p>Hace un año largo escribí <a href="http://www.elespectador.com/opinion/columna-389967-saber-y-perder">una columna para <em>El Espectador</em></a> donde explicaba cómo <a href="http://nbviewer.ipython.org/url/finiterank.com/saber/saber.ipynb">un análisis estadístico sencillo</a> demuestra que en realidad los colegios públicos y los colegios privados en Colombia no se diferencian sustancialmente en cuanto a resultados en Saber. La lista de los mejores colegios está determinada, más que nada, por <a href="http://www.finiterank.com/notas/2013/12/19/19/">el nivel de ingresos</a> de las familias de sus estudiantes.</p>
