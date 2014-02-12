@@ -36,11 +36,11 @@ layout: reporte
 <div class="col-md-4 caption"></div>
 <div class="col-md-8 texto">
 <img src="pics/dist.mat.leng.municipios.png">
-<p>Los resultados en matemática se concentran hacia la izquierda, en los puntajes bajos, y los de lenguaje hacia la derecha, en los puntajes más altos. Esto sugiere que a los estudiantes les va mejor en lenguaje que en matemática (o que la educación escolar en matemática está más desconectada del contenido de las pruebas). Así se ve esta disparidad cuando en un mapa se colorean los municipios de acuerdo a su puntaje en cada una de las dos areas:</p>
+<p>Los resultados en matemática se concentran hacia la izquierda, en los puntajes bajos, y los de lenguaje hacia la derecha, en los puntajes más altos. Esto sugiere que a los estudiantes les va mejor en lenguaje que en matemática (o que la educación escolar en matemática está más desconectada del contenido de las pruebas). Así se ve esta disparidad cuando en un mapa se colorean los municipios de acuerdo a su puntaje en cada una de las dos areas (clic para agrandar):</p>
 </div>
 </div>
 <div class="row">
-<div class="col-md-12 texto"><img src="pics/mat.leng.municipios.png">
+<div class="col-md-12 texto"><a href="pics/mat.leng.municipios.png"><img src="pics/mat.leng.municipios.png"></a>
 </div>
 </div>
 <div class="row">
