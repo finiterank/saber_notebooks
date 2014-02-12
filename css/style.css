@@ -5,7 +5,7 @@ body{font-family: 'Bitter', serif; color:#555;}
 a {color:#d45500;}
 a:visited {color: #d45500;}
 
-#topx{width:80px;}
+#topx{width:80px; display:inline;}
 #titulo-reporte{padding:0;}
 .texto p {font-size:1.2em;}
 .texto img {width:100%;}
