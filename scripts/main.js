@@ -96,6 +96,31 @@ function generateTable() {
 	});
 }
 
+
+function generateTableDpto() {
+	'use strict';
+	var tabla = {};
+	var nombres = {};
+	$.get('rank.departamentos.2013.csv', function(csvString) {
+	    var lineasTabla = csvString.split(/\r\n|\n/);
+	    var titulos = lineasTabla[0].split(',');
+	    var n = titulos.length;
+		tabla.tit = titulos;
+	    tabla.len = lineasTabla.length;
+	    for(var i=1; i<lineasTabla.length; i++) {
+	        var fila = lineasTabla[i].split(',');
+	        tabla[i] = {};
+	        nombres[fila[0]+', '+fila[1]] = i;
+	        for (var j=0; j<= n; j++){
+	            tabla[i][titulos[j]] = fila[j];
+	        }
+	    }
+	    var tablaHTML = imprimirTabla(tabla, 1,33,0);
+		$('#tabla-departamentos').append(tablaHTML);
+	});
+}
+
+
 function generateTableMat() {
 	'use strict';
 	var tabla = {};
@@ -185,6 +210,7 @@ $(document).ready(function() {
 	generateTableMat();
 	generateTableLeng();
 	generateTable();
+	generateTableDpto();
 	var numerosImpresos = imprimirNumeros(1106);
 	$('#formulario-numeros').append(numerosImpresos);
 });

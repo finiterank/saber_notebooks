@@ -118,6 +118,12 @@ layout: reporte
 
 <div style="margin-top:2em;"><strong>Municipio:</strong> <span id="formulario"></span></div>
 <div id="tabla-resultados"></div>
+
+<h2>Adenda: Departamentos</h2>
+
+Para el gobernador curioso, aquí está la tabla de promedios de matemática y lenguaje en colegios públicos por departamentos:
+
+<div id="tabla-departamentos"></div>
 </div>
 </div>
 </div>
