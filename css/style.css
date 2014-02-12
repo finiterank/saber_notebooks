@@ -5,6 +5,12 @@ body{font-family: 'Bitter', serif; color:#555;}
 a {color:#d45500;}
 a:visited {color: #d45500;}
 
+.pie{background-color: #555;
+	color:#f1f1f1;
+	height: 200px;
+	padding-top:30px;
+	margin-top:40px;}
+
 #topx{width:80px; display:inline;}
 #fila{display:inline;}
 #titulo-reporte{padding:0;}
