@@ -66,15 +66,17 @@ layout: reporte
 </div>
 </div>
 <div class="row">
-<div class="col-md-12"><div id="volver-arriba-tabla"></div></div>
+<div class="col-md-12" id="volver-arriba-tabla"></div>
 </div>
 
 <div class="row">
 <div class="col-md-4 caption"><small>
-<div id="formulario" style="margin-top:2em;"></div>
-Seleccione su municipio para ver su posición en la lista conjunta (ordenada usando como índice el promedio de los resultados (normalizados) en matemática y lenguaje) y los cinco municipios justo por debajo y justo por encima del que elija. La tabla completa está disponible para descarga <a href="https://docs.google.com/spreadsheet/ccc?key=0AnK0b1-vFIdcdHNWbFN2N2NKNWtUSjJJcS1tT3R1THc&usp=sharing#gid=0">acá</a>.</small></div>
+La tabla completa está disponible para descarga <a href="https://docs.google.com/spreadsheet/ccc?key=0AnK0b1-vFIdcdHNWbFN2N2NKNWtUSjJJcS1tT3R1THc&usp=sharing#gid=0">acá</a>.</small></div>
 <div class="col-md-8">
 <h2>Busque su municipio</h2>
+Una forma de organizar la lista de municipios tomando en cuenta ambas áreas es tomar el promedio y usarlo como índice. Esta aproximación, sin embargo, requiere primero que los rangos de valores de ambas áreas sean los mismos, de lo contrario valores muy altos o muy bajos en un área como matemática (con un rango amplio) pueden pesas demasiado al promediarlos con los valores de lenguaje (que tiene un rango más angosto). La siguiente tabla permite navegar la lista de acuerdo al orden de este promedio de puntajes normalizados (un valor entre cero y uno). Al elegir un municipio puede ver la posición del municipio, sus puntajes en matemática y lenguaje y también estos mismos valores para los cinco municipios por encima y por debajo del que eligió.
+
+<strong>Municipio:</strong> <span id="formulario" style="margin-top:2em;"></span>
 <div id="tabla-resultados"></div>
 </div>
 </div>
