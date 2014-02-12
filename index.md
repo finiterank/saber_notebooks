@@ -121,7 +121,7 @@ layout: reporte
 
 <h2>Adenda: Departamentos</h2>
 
-Para el gobernador curioso, aquí está la tabla de promedios de matemática y lenguaje en colegios públicos por departamentos:
+<p>Para el gobernador curioso, aquí está la tabla de promedios de matemática y lenguaje en colegios públicos por departamentos (ordenado por promedio de los puntajes normalizados):</p>
 
 <div id="tabla-departamentos"></div>
 </div>
