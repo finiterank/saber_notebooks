@@ -12,6 +12,7 @@ library(FactoMineR)
 library(gridExtra)
 library(maptools)
 library(rgdal)
+library(Hmisc)
 ```
 
 Para empezar, carguemos los promedios por colegio de las pruebas Saber 11 de 2013, disponibles [acá](http://www.icfes.gov.co/resultados/saber-11-resultados?id=39) para descarga. 
@@ -37,7 +38,8 @@ dim(saber2013.publicos.df)
 Armemos un nuevo dataframe por municipio que contenga: suma de los aportes de cada colegio y total de estudiantes evaluados.
 
 ```{r}
-saber2013.municipios.df <- ddply(saber2013.publicos.df, ~cod_municipio, summarize, aportes.mat = sum(aporte.matematica), aportes.leng = sum(aporte.lenguaje), total.evaluados = sum(evaluados), municipio = municipio[1], departamento = departamento[1])
+saber2013.naturaleza.df <- ddply(saber2013.df, ~naturaleza, summarise, evaluados = sum(evaluados))
+saber2013.municipios.df <- ddply(saber2013.publicos.df, ~cod_municipio, summarise, aportes.mat = sum(aporte.matematica), aportes.leng = sum(aporte.lenguaje), total.evaluados = sum(evaluados), municipio = municipio[1], departamento = departamento[1])
 ```
 
 ```{r}
@@ -114,7 +116,13 @@ p.leng
 
 ```{r}
 mat.leng.municipios <- arrangeGrob(p.mat,p.leng, nrow=1)
-ggsave("./figure/mat.leng.municipios.png", mat.leng.municipios, width=30, height=15)
+ggsave("mat.leng.municipios.png", mat.leng.municipios, width=20, height=15)
+```
+
+```{r}
+formatoporciento <- function(x){ 
+    x*100 
+}
 ```
 
 ```{r}
@@ -122,10 +130,11 @@ barplot_mat <- ggplot(saber2013.municipios.df, aes(x=promedio.mat)) +
     geom_histogram(aes(y=..density..),      # Histogram with density instead of count on y-axis
                    binwidth=.5,
                    colour="black", fill="white") +
-    geom_density(alpha=.4, fill=colors()[91]) +  
+    geom_density(alpha=.4, fill=colors()[91]) + 
+    scale_y_continuous(labels = formatoporciento) +
   xlab("Promedio en Matemática") +
-  ylab("Proporción de colegios") + 
-  ggtitle("Distribución de Promedios de Matemática por Municipio\n(Colegios Públicos - Saber 11 - 2013)")
+  ylab("Porcentaje de colegios")  
+  # ggtitle("Distribución de Promedios de Matemática por Municipio\n(Colegios Públicos - Saber 11 - 2013)")
 
 barplot_mat
 ```
@@ -135,10 +144,11 @@ barplot_leng <- ggplot(saber2013.municipios.df, aes(x=promedio.leng)) +
     geom_histogram(aes(y=..density..),      # Histogram with density instead of count on y-axis
                    binwidth=.5,
                    colour="black", fill="white") +
-    geom_density(alpha=.4, fill=colors()[91]) +  
+    geom_density(alpha=.4, fill=colors()[91]) + 
+    scale_y_continuous(labels = formatoporciento) +
   xlab("Promedio en Lenguaje") +
-  ylab("Proporción de colegios") + 
-  ggtitle("Distribución de Promedios de Lenguaje por Municipio\n(Colegios Públicos - Saber 11 - 2013)")
+  ylab("Porcentaje de colegios") 
+  #ggtitle("Distribución de Promedios de Lenguaje por Municipio\n(Colegios Públicos - Saber 11 - 2013)")
 
 barplot_leng
 ```
@@ -147,9 +157,10 @@ barplot_leng
 barplot_evaluados <- ggplot(saber2013.municipios.df, aes(x=total.evaluados)) + 
       geom_density(alpha=.7, fill=colors()[91]) + 
       scale_x_log10() +
+      scale_y_continuous(labels = formatoporciento) +
   xlab("Número de evaluados") +
-  ylab("Proporción de colegios") + 
-  ggtitle("Distribución de número de evaluados por municipio\n(Colegios Públicos - Saber 11 - 2013)")
+  ylab("Porcentaje de colegios") 
+  #ggtitle("Distribución de número de evaluados por municipio\n(Colegios Públicos - Saber 11 - 2013)")
 
 barplot_evaluados
 ```
@@ -164,7 +175,7 @@ median(saber2013.municipios.df$total.evaluados)
 
 ```{r}
 distribuciones.mat.leng <- arrangeGrob(barplot_mat,barplot_leng, nrow=2)
-ggsave("./figure/dist.mat.leng.municipios.png", distribuciones.mat.leng, width=15, height=30)
+ggsave("dist.mat.leng.municipios.png", distribuciones.mat.leng, width=10, height=10)
 ```
 
 ```{r}
@@ -175,8 +186,14 @@ ggsave("./figure/distribuciones-promedios.png", mat.leng, width=20, height=20)
 p.mat,p.leng
 
 ```{r}
+saber2013.municipios.df$promedio <- (saber2013.municipios.df$promedio.mat + saber2013.municipios.df$promedio.leng)/2
+
+ranking.compartido <- saber2013.municipios.df[with(saber2013.municipios.df, order(-promedio, municipio)), ]
+
 ranking.mat <- saber2013.municipios.df[with(saber2013.municipios.df, order(-promedio.mat, municipio)), ]
 ranking.leng <- saber2013.municipios.df[with(saber2013.municipios.df, order(-promedio.leng, municipio)),]
+
+
 ```
 
 ```{r}
@@ -216,9 +233,191 @@ write(paste(1:nrow(mejores.publicos), ") ", mejores.publicos$municipio, " (", me
 ```
 
 ```{r}
-ranking <- ranking.leng[,c('municipio', 'departamento', 'promedio.mat', 'promedio.leng', 'total.evaluados')]
-names(ranking) <- c('Municipio', 'Departamento', 'Matemática', 'Lenguaje', 'Evaluados')
+# ranking <- ranking.leng[,c('municipio', 'departamento', 'promedio.mat', 'promedio.leng', 'total.evaluados')]
+
+ranking <- ranking.compartido[,c('municipio', 'departamento', 'promedio.mat', 'promedio.leng', 'promedio', 'total.evaluados')]
+
+names(ranking) <- c('Municipio', 'Departamento', 'Matemática', 'Lenguaje', 'Promedio', 'Evaluados')
+max.mat <- max(ranking$Matemática)
+max.leng <- max(ranking$Lenguaje)
+min.leng <- min(ranking$Lenguaje)
+min.mat <- min(ranking$Matemática)
+slope.mat <- 1/(max.mat - min.mat)
+slope.leng <- 1/(max.leng - min.leng)
+ranking$Matemática.Normal <- slope.mat * (ranking$Matemática - min.mat)
+ranking$Lenguaje.Normal <- slope.leng * (ranking$Lenguaje - min.leng)
+ranking$Promedio.Normalizado <- (ranking$Matemática.Normal + ranking$Lenguaje.Normal)/2
+ranking <- ranking[with(ranking, order(-Promedio.Normalizado, Municipio)), ]
+ranking <- ranking[,c('Municipio', 'Departamento', 'Matemática', 'Lenguaje', "Promedio.Normalizado", 'Evaluados')]
+names(ranking) <- c('Municipio', 'Departamento', 'Matemática', 'Lenguaje', 'Promedio', 'Evaluados')
 ranking$Matemática <- round(ranking$Matemática, 2)
 ranking$Lenguaje <- round(ranking$Lenguaje, 2)
-write.csv(ranking, file="rank.csv", row.names=FALSE)
+ranking$Promedio <- round(ranking$Promedio, 3)
+write.csv(ranking, file="../rank.csv", row.names=FALSE)
+ranking.matematica <- ranking[with(ranking, order(-Matemática, Municipio)), ]
+ranking.matematica <- ranking.matematica[, c("Municipio", "Departamento", "Matemática", "Evaluados")]
+ranking.lenguaje <- ranking[with(ranking, order(-Lenguaje, Municipio)), ]
+ranking.lenguaje <- ranking.lenguaje[, c("Municipio", "Departamento", "Lenguaje", "Evaluados")]
+write.csv(ranking.matematica, file="../rank.mat.csv", row.names=FALSE)
+write.csv(ranking.lenguaje, file="../rank.leng.csv", row.names=FALSE)
+
+```
+
+```{r}
+
+pruebis <- paste(capitalize(strsplit(levels(saber2013.municipios.df$departamento), ' ')), collapse=' ')
+
+```
+
+```{r}
+plot_evaluados_mat <- ggplot(saber2013.municipios.df, aes(x=total.evaluados , y=promedio.mat)) +
+  geom_point(colour="orange") +
+  geom_smooth(colour="red", method=lm, se=FALSE) +
+  ylab("Promedio en matemática") +
+  xlab("Número de estudiantes evaluados") +
+  scale_x_log10()
+
+plot_evaluados_mat
+ggsave("../figure/promedios.mat.evaluados.png", plot_evaluados_mat, width=10, height=10)
+```
+
+```{r}
+reg <- lm(total.evaluados ~ promedio.mat, data=saber2013.municipios.df)
+```
+
+```{r}
+plot_leng_mat <- ggplot(saber2013.municipios.df, aes(x=promedio.mat , y=promedio.leng)) +
+  geom_point(aes(colour=departamento)) +
+  geom_smooth(method=lm, se=FALSE) +
+  xlab("Promedio en matemática") +
+  ylab("Promedio en lenguaje") +
+  ggtitle("Promedio en matemática contra promedio en lenguaje") 
+
+plot_leng_mat
+```
+
+```{r}
+load("./data/pobreza.Rda")
+incidencia.pobreza <- pobreza[, c("Código.Municipio", "Población", "Población.Pobre", "Incidencia")]
+mezcla.saber.pobreza <- merge(saber2013.municipios.df, incidencia.pobreza, by.x="cod_municipio", by.y="Código.Municipio", all.x=T, all.y=F)
+```
+
+```{r}
+plot_pobreza_saber <- ggplot(mezcla.saber.pobreza, aes(x=Incidencia , y=promedio.leng)) +
+  geom_point(colour="orange") +
+  geom_smooth(colour="red", method=lm, se=FALSE) +
+  xlab("Incidencia de pobreza multidimensional") +
+  ylab("Promedio municipal en lenguaje") 
+  #ggtitle("Pobreza y resultados en Saber 11 para colegios públicos") 
+
+plot_pobreza_saber
+ggsave("../figure/pobreza.saber.png", plot_pobreza_saber, width=10, height=10)
+
+```
+
+```{r}
+nombres.columnas.2011 <- c('Puesto',
+             'Colegio',
+             'Municipio',
+             'Departamento',
+             'naturaleza',
+             'Periodo',
+             'Jornada',
+             'Calendario',
+             'Evaluados',
+             'Promedio_Total',
+             'matematica',
+             'quimica',
+             'fisica',
+             'biologia',
+             'filosofia',
+             'ingles',
+             'lenguaje',
+             'sociales',
+             'DE_Matematica',
+             'DE_Quimica',
+             'DE_Fisica',
+             'DE_Biologia',
+             'DE_Filosofia',
+             'DE_Ingles',
+             'DE_Lenguaje',
+             'DE_Sociales',
+             'CSE_2009')
+saber2011.df <- read.csv("data/saber2011.csv", col.names=nombres.columnas.2011)
+levels(saber2011.df$naturaleza) <- c("OFICIAL", "NO OFICIAL", "OFICIAL")
+```
+
+```{r}
+saber2011.df$aporte.matematica <- saber2011.df$matematica * saber2011.df$Evaluados
+saber2011.df$aporte.lenguaje <- saber2011.df$lenguaje * saber2011.df$Evaluados
+saber2011.df$codmun <- paste(saber2011.df$Municipio, saber2011.df$Departamento, sep=", ")
+saber2011.publicos.df <- saber2011.df[saber2011.df$naturaleza == "OFICIAL",]
+
+saber2011.municipios.df <- ddply(saber2011.publicos.df, ~codmun, summarise, aportes.mat = sum(aporte.matematica), aportes.leng = sum(aporte.lenguaje), total.evaluados = sum(Evaluados), municipio = Municipio[1], departamento = Departamento[1])
+
+saber2011.municipios.df$promedio.mat <- saber2011.municipios.df$aportes.mat / saber2011.municipios.df$total.evaluados
+saber2011.municipios.df$promedio.leng <- saber2011.municipios.df$aportes.leng / saber2011.municipios.df$total.evaluados
+
+ranking2011.mat <- saber2011.municipios.df[with(saber2011.municipios.df, order(-promedio.mat, municipio)), ]
+ranking2011.guardar <- ranking2011.mat[, c("municipio", "departamento", "promedio.mat", "promedio.leng", "total.evaluados")]
+
+names(ranking2011.guardar) <- c("Municipio", "Departamento", "Matemática", "Lenguaje", "Evaluados")
+
+
+write.csv(ranking2011.guardar, file="../rank.2011.csv", row.names=FALSE)
+
+ranking2011.leng <- saber2011.municipios.df[with(saber2011.municipios.df, order(-promedio.leng, municipio)),]
+```
+
+```{r}
+top110.2011.mat <- ranking2011.mat[1:110,]
+write(paste(1:50, top50.2011.mat$municipio, "(", top50.2011.mat$departamento, ") Puntaje:", round(top50.2011.mat$promedio.mat,2), "Evaluados:", top50.2011.mat$total.evaluados), file="output_files/top50.2011.mat.txt", sep="\n")
+
+top110.2011.leng <- ranking2011.leng[1:110,]
+write(paste(1:50, top50.2011.leng$municipio, "(", top50.2011.leng$departamento, ") Puntaje:", round(top50.2011.leng$promedio.mat,2), "Evaluados:", top50.2011.leng$total.evaluados), file="output_files/top50.2011.leng.txt", sep="\n")
+toponepercent2011 <- intersect(top110.2011.mat$codmun, top110.2011.leng$codmun)
+mejores.publicos2011 <- saber2011.municipios.df[saber2011.municipios.df$codmun %in% toponepercent2011,]
+mejores.publicos2011 <- mejores.publicos2011[with(mejores.publicos2011, order(-promedio.mat, -promedio.leng)),]
+write(paste(1:nrow(mejores.publicos2011), ") ", mejores.publicos2011$municipio, " (", mejores.publicos2011$departamento, ") \n   Puntaje Matemática: ", round(mejores.publicos2011$promedio.mat,2), "\n   Puntaje Lenguaje: ", round(mejores.publicos2011$promedio.leng,2), " Evaluados: ", mejores.publicos2011$total.evaluados, sep=""), file="output_files/mejores.publicos.2011.txt", sep="\n")
+```
+
+```{r}
+simpleCap <- function(x) {
+     s <- strsplit(x, " ")[[1]]
+     paste(toupper(substring(s, 1,1)), substring(s, 2),
+           sep="", collapse=" ")
+ }
+```
+
+```{r}
+mejores.publicos2011$codmun <- toupper(mejores.publicos2011$codmun)
+mejores.publicos$codmun <- paste(mejores.publicos$municipio, mejores.publicos$departamento, sep=", ")
+serepitenen2011y2013 <- intersect(mejores.publicos2011$codmun, mejores.publicos$codmun)
+serepitenen2011y2013 <- tolower(serepitenen2011y2013)
+capi <- sapply(serepitenen2011y2013, simpleCap)
+write(capi, file="", sep="\n")
+```
+
+```{r}
+saber2013.departamentos.df <- ddply(saber2013.publicos.df, ~departamento, summarise, aportes.mat = sum(aporte.matematica), aportes.leng = sum(aporte.lenguaje), total.evaluados = sum(evaluados))
+saber2013.departamentos.df$promedio.mat <- saber2013.departamentos.df$aportes.mat / saber2013.departamentos.df$total.evaluados
+saber2013.departamentos.df$promedio.leng <- saber2013.departamentos.df$aportes.leng / saber2013.departamentos.df$total.evaluados
+
+saber2013.departamentos.df <- saber2013.departamentos.df[with(saber2013.departamentos.df, order(-promedio.mat)),]
+
+saber2013.rank.df <- saber2013.departamentos.df[,c("departamento", "promedio.mat", "promedio.leng", "total.evaluados")]
+
+names(saber2013.rank.df) <- c("Departamento", "Matemática", "Lenguaje", "Evaluados")
+min.mat.d <- min(saber2013.rank.df$Matemática)
+min.len.d <- min(saber2013.rank.df$Lenguaje)
+max.mat.d <- max(saber2013.rank.df$Matemática)
+max.len.d <- max(saber2013.rank.df$Lenguaje)
+slope.mat.d <- 1/(max.mat.d - min.mat.d)
+slope.len.d <- 1/(max.len.d - min.len.d)
+saber2013.rank.df$Promedio <- ((slope.mat.d*(saber2013.rank.df$Matemática - min.mat.d)) + (slope.len.d*(saber2013.rank.df$Lenguaje - min.len.d)))/2
+saber2013.rank.df$Matemática <- round(saber2013.rank.df$Matemática, 2)
+saber2013.rank.df$Lenguaje <- round(saber2013.rank.df$Lenguaje, 2)
+saber2013.rank.df$Promedio <- round(saber2013.rank.df$Promedio, 3)
+saber2013.rank.df <- saber2013.rank.df[with(saber2013.rank.df, order(-Promedio)),]
+write.csv(saber2013.rank.df, file="../rank.departamentos.2013.csv", row.names=FALSE)
 ```
