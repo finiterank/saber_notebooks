@@ -152,6 +152,12 @@ function generateTableLeng() {
             $('#tabla-lenguaje').append(t);
             $('.xequals').empty();
             $('.xequals').append(v);
+            if(v >20){
+            	$('#volver-arriba-tabla').append('<p class="text-right"><small><a href="#arriba-tabla">Volver arriba</a></small></p>');
+            }
+            else {
+            	$('#volver-arriba-tabla').empty();
+            }
         });
 	});
 }
@@ -172,6 +178,22 @@ function imprimirNumeros(n){
 	output = output + '</select>';
 	return output;
 }
+
+$(function() {
+	  $('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+	});
 
 $(document).ready(function() {
 	'use strict';

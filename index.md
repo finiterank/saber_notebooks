@@ -55,7 +55,7 @@ layout: reporte
 </div>
 </div>
 
-<div class="row">
+<div class="row" id="arriba-tabla">
 <div class="col-md-6">
 <h3>Top <span class="xequals">15</span> en matemática</h3>
 <div id="tabla-matematica"></div>
@@ -64,6 +64,9 @@ layout: reporte
 <h3>Top <span class="xequals">15</span> en lenguaje</h3>
 <div id="tabla-lenguaje"></div>
 </div>
+</div>
+<div class="row">
+<div class="col-md-12"><div id="volver-arriba-tabla"></div></div>
 </div>
 
 <div class="row">
