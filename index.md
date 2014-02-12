@@ -73,7 +73,7 @@ layout: reporte
 
 <img src="pics/promedios.mat.evaluados.png">
 
-<p>¿Y qué hay de la pobreza? Tal vez los municipios que ocupan los primeros lugares tienen bajos niveles de pobreza. En la gráfica a continuación comparo la incidencia de pobreza multidimensional (de acuerdo a cálculos de 2006) y el puntaje promedio en lenguaje:
+<p>¿Y qué hay de la pobreza? Tal vez los municipios que ocupan los primeros lugares tienen bajos niveles de pobreza. En la gráfica a continuación comparo <a href="https://www.dnp.gov.co/LinkClick.aspx?fileticket=lXf_K5Q1VZE%3D&tabid=337">la incidencia de pobreza multidimensional</a> (de acuerdo a cálculos de 2005) y el puntaje promedio en lenguaje:
 
 <img src="pics/pobreza.saber.png">
 
