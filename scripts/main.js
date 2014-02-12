@@ -162,7 +162,7 @@ function imprimirNumeros(n){
 	for(var i=0; i < n; i++){
 		var j = i + 1;
 		if(j === 15){
-			output = output + '<option selected="selected" value="' + j + '">';	
+			output = output + '<option selected="selected" value="' + j + '">' + j;	
 		}
 		else{
 			output = output + '<option value="' + j + '">' + j;
