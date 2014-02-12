@@ -69,6 +69,12 @@ layout: reporte
 <div class="col-md-12" id="volver-arriba-tabla"></div>
 </div>
 
+<div id="titulo-reporte" class="container-fluid">
+<header>
+<img src="pics/santa_maria.jpg">
+</header>
+</div>
+
 <div class="row">
 <div class="col-md-4 caption"></div>
 <div class="col-md-8 texto ">
