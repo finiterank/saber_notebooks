@@ -13,9 +13,8 @@ layout: reporte
 
 <div class="container">
 <div class="row">
-<div class="col-md-4">
-	<small>Panorámica de <a href="http://www.launion-narino.gov.co/index.shtml">La Unión, Nariño</a>, el municipio con el mejor promedio en matemática en colegios públicos en 2013.<br>Fuente: <a href="http://commons.wikimedia.org/wiki/File:Vista_de_la_union_nari%C3%B1o.JPG">Wikimedia Commons</a></small>
-</div>
+<div class="col-md-4 caption">
+	<small>Panorámica de <a href="http://www.launion-narino.gov.co/index.shtml">La Unión, Nariño</a>, el municipio con el mejor promedio en matemática en colegios públicos en 2013.<p class="text-right">Fuente: <a href="http://commons.wikimedia.org/wiki/File:Vista_de_la_union_nari%C3%B1o.JPG">Wikimedia Commons</a>)</p></small></div>
 <div class="col-md-8 texto">
 
 <center><br<br>DOCUMENTO EN DESARROLLO <br>TABLA DE MUNICIPIOS AL FINAL<br><br></center>
@@ -68,6 +67,7 @@ layout: reporte
 <div class="row">
 <div class="col-md-12" id="volver-arriba-tabla"></div>
 </div>
+</div>
 
 <div id="titulo-reporte" class="container-fluid">
 <header>
@@ -75,8 +75,9 @@ layout: reporte
 </header>
 </div>
 
+<div class="container">
 <div class="row">
-<div class="col-md-4 caption"></div>
+<div class="col-md-4 caption"><small>Panorámica de <a href="http://santamaria-boyaca.gov.co/index.shtml">Santa María, Boyacá</a> (¿Han notado, por cierto, lo flagrantemente inútiles e innavegables que son la mayoría de los sitios web de los municipios?), el municipio con el mejor promedio en lenguaje en colegios públicos en 2013.<p class="text-right">(Fuente: <a href="http://santamaria-boyaca.gov.co/index.shtml">Alcaldía de Santa María</a>)</p></small></div>
 <div class="col-md-8 texto ">
 <h2>Busque su municipio</h2>
 <p>Una forma de organizar la lista de municipios tomando en cuenta ambas áreas es tomar el promedio y usarlo como índice. Esta aproximación, sin embargo, requiere primero que los rangos de valores de ambas áreas sean los mismos, de lo contrario valores muy altos o muy bajos en un área como matemática (con un rango amplio) pueden pesas demasiado al promediarlos con los valores de lenguaje (que tiene un rango más angosto). La siguiente tabla permite navegar la lista de acuerdo al orden de este promedio de puntajes normalizados (un valor entre cero y uno). Al elegir un municipio puede ver la posición del municipio, sus puntajes en matemática y lenguaje y también estos mismos valores para los cinco municipios por encima y por debajo del que eligió.</p>

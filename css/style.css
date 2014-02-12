@@ -10,7 +10,7 @@ a:visited {color: #d45500;}
 #titulo-reporte{padding:0;}
 .texto p {font-size:1.2em;}
 .texto img {width:100%;}
-.caption h2{margin:0 0 5px 0; font-size:1.5em;}
+.caption{color:#aaa;}
 header {display:block;
 	margin:0 0 20px 0;
 	padding:0;
