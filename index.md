@@ -80,7 +80,9 @@ layout: reporte
 
 <img src="pics/pobreza.saber.png">
 
-<p>En este caso hay una correlación más o menos clara: entre mayor es el índice de pobreza multidimensional (proporción de la población categorizada como pobre de acuerdo a una valoración de sus condiciones de vida (más que de su nivel de ingresos)) los resultados en el examen son menores. Esto, sin embargo, no es de sorprenderse: entre los factores que son considerados en la construcción del índice de pobreza multidimensional están el bajo logro educativo, el analfabetismo y la inasistencia y el rezago escolar. Por otro lado, no sobra señalar que los municipios que ocupan las primeras dos posiciones en lenguaje tienen incidencia de pobreza de 0,6 (Santa María, Boyacá) y 0,73 (San José de Miranda, Santander). La Unión, Nariño, el primero en matemática, tiene una incidencia de pobreza multidimensional de 0,74.</p>
+<p>En este caso hay una correlación más o menos clara: entre mayor es el índice de pobreza multidimensional (proporción de la población categorizada como pobre de acuerdo a una valoración de sus condiciones de vida (más que de su nivel de ingresos)) los resultados en el examen son menores. Esto, sin embargo, no es de sorprenderse: entre los factores que son considerados en la construcción del índice de pobreza multidimensional están el bajo logro educativo, el analfabetismo y la inasistencia y el rezago escolar.</p>
+
+<p>Por otro lado, no sobra señalar que los municipios que ocupan las primeras dos posiciones en lenguaje tienen incidencia de pobreza de 0,6 (Santa María, Boyacá) y 0,73 (San José de Miranda, Santander). La Unión, Nariño, el primero en matemática, tiene una incidencia de pobreza multidimensional de 0,74.</p>
 </div>
 </div>
 </div>
