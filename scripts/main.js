@@ -148,10 +148,29 @@ function generateTableLeng() {
 	    $('#topx').change(function(){
             var v = Number(this.value);
             var t = imprimirTabla(tabla, 1,v,0);
-            $('#tabla-lenguaje').empty(t);
+            $('#tabla-lenguaje').empty();
             $('#tabla-lenguaje').append(t);
+            $('.xequals').empty();
+            $('.xequals').append(v);
         });
 	});
+}
+
+function imprimirNumeros(n){
+	'use strict';
+	var output = '<select id="topx" class="form-control">';
+	for(var i=0; i < n; i++){
+		j = i + 1
+		if(j === 15){
+			output = output + '<option selected="selected" value="' + j + '">';	
+		}
+		else{
+			output = output + '<option value="' + j + '">' + j;
+		}
+		output = output + '</option>';
+	}
+	output = output + '</select>';
+	return output;
 }
 
 $(document).ready(function() {
@@ -159,4 +178,6 @@ $(document).ready(function() {
 	generateTableMat();
 	generateTableLeng();
 	generateTable();
+	var numerosImpresos = imprimirNumeros(1106);
+	$('#formulario-numeros').append(numerosImpresos);
 });

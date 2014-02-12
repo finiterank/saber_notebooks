@@ -51,7 +51,7 @@ layout: reporte
 <div class="col-md-4 caption"></div>
 <div class="col-md-8 texto">
 <h2>Los más</h2>
-<p>La pregunta obvia ante los mapas es cuáles son los municipios que se destacan por sus promedios altos en cada una de las dos áreas. ¿Hay algún patrón? ¿Puntos de acumulación? ¿Son municipios más ricos o más pequeños en general? No es tan claro. La que sigue es la tabla de los primeros <span class="xequals">15</span> colegios en cada área:</p>
+<p>La pregunta obvia ante los mapas es cuáles son los municipios que se destacan por sus promedios altos en cada una de las dos áreas. ¿Hay algún patrón? ¿Puntos de acumulación? ¿Son municipios más ricos o más pequeños en general? No es tan claro. La que sigue es la tabla de los primeros <span id="formulario-numeros"></span> colegios en cada área:</p>
 </div>
 </div>
 
