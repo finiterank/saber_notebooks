@@ -18,7 +18,7 @@ function imprimirNombres(nom){
 	console.log(lista);
 	var output = '<select id="fila" class="form-control">';
 	for(var i=0; i < lista.length; i++){
-		if(nom[lista[i]] === 924){
+		if(nom[lista[i]] === 927){
 			output = output + '<option selected="selected" value="' + nom[lista[i]] + '">';	
 		}
 		else{
@@ -78,7 +78,7 @@ function generateTable() {
 	            tabla[i][titulos[j]] = fila[j];
 	        }
 	    }
-	    var tablaHTML = imprimirTabla(tabla, 919,929,924);
+	    var tablaHTML = imprimirTabla(tabla, 922,932,927);
 	    var nombresHTML = imprimirNombres(nombres);
 		$('#tabla-resultados').append(tablaHTML);
 		$('#formulario').append(nombresHTML);
