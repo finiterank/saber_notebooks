@@ -69,7 +69,7 @@ layout: reporte
 <div class="col-md-4"></div>
 <div class="col-md-8 texto">
 <h2>Detalles</h2>
-<p>La lectura detallada de la lista genera nuevas preguntas: la mayoría de los primeros lugares son ocupados por municipios relativamente pequeños en Santander, Nariño, Antioquia y Boyacá. En las listas de los primeros cincuenta municipios sólo hay dos capitales: Tunja y Bucaramanga. Aunque están presentes varios de los municipios periféricos a ciudades grandes donde se encuentran las sedes de los colegios privados de élite (como Envigado, Floridablanca y Cajicá), Bogotá ocupa la posición 73 en lenguaje y la 156 en matemática. Medellín por su parte alcanza la posición 81 en lenguaje y la 272 en matemática. ¿Tal vez hay una relación entre altos promedios municipales y bajo número de evaluados? La siguiente gráfica sugiere que la respuesta a esta pregunta es negativa:</p> 
+<p>La lectura detallada de las listas genera nuevas preguntas: la mayoría de los primeros lugares son ocupados por municipios relativamente pequeños en Santander, Nariño, Antioquia y Boyacá. En las listas de los primeros cincuenta municipios sólo hay dos capitales: Tunja y Bucaramanga. Aunque están presentes varios de los municipios periféricos a ciudades grandes donde se encuentran las sedes de los colegios privados de élite (como Envigado, Floridablanca y Cajicá), Bogotá ocupa la posición 73 en lenguaje y la 156 en matemática. Medellín por su parte alcanza la posición 81 en lenguaje y la 272 en matemática. ¿Tal vez hay una relación entre altos promedios municipales y bajo número de evaluados? La siguiente gráfica sugiere que la respuesta a esta pregunta es negativa:</p> 
 
 <img src="pics/promedios.mat.evaluados.png">
 
