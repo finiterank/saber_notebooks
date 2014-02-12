@@ -160,7 +160,7 @@ function imprimirNumeros(n){
 	'use strict';
 	var output = '<select id="topx" class="form-control">';
 	for(var i=0; i < n; i++){
-		j = i + 1
+		var j = i + 1;
 		if(j === 15){
 			output = output + '<option selected="selected" value="' + j + '">';	
 		}
