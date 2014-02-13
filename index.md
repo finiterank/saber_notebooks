@@ -3,14 +3,7 @@ title: Reporte
 layout: reporte
 ---
 
-<div id="titulo-reporte" class="container-fluid">
-<header>
-<img src="pics/la_union.jpg">
-<h1>Los más educados<br><small>Un sobrevuelo de Saber 11 (2013) a nivel municipal</small></h1>
-</header>
-</div>
-
-<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+<nav class="navbar navbar-default navbar-static-top" role="navigation">
   <div class="container">
      <ul class="nav navbar-nav">
         <li><a href="#los_mas">Listas municipales</a></li>
@@ -19,6 +12,13 @@ layout: reporte
       </ul>
   </div>
 </nav>
+
+<div id="titulo-reporte" class="container-fluid">
+<header>
+<img src="pics/la_union.jpg">
+<h1>Los más educados<br><small>Un sobrevuelo de Saber 11 (2013) a nivel municipal</small></h1>
+</header>
+</div>
 
 <div class="container">
 <div class="row">
