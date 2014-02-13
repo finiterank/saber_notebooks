@@ -32,11 +32,14 @@ layout: reporte
 
 <p>Hace un año largo escribí <a href="http://www.elespectador.com/opinion/columna-389967-saber-y-perder">una columna para <em>El Espectador</em></a> donde explicaba cómo <a href="http://nbviewer.ipython.org/url/finiterank.com/saber/saber.ipynb">un análisis estadístico sencillo</a> demuestra que en realidad los colegios públicos y los colegios privados en Colombia no se diferencian sustancialmente en cuanto a resultados en Saber. La lista de los mejores colegios está determinada, más que nada, por <a href="http://www.finiterank.com/notas/2013/12/19/19/">el nivel de ingresos</a> de las familias de sus estudiantes.</p>
 
+
 <h2 id="otra_lista">Una lista diferente: municipios y colegios públicos</h2>
 
 <p>En este pequeño reporte, basado en una idea de Jorge Orlando Melo (<a href="http://www.finiterank.com/notas/2014/02/12/12-2/">aquí explico más</a>), quiero concentrarme en los resultados de las pruebas Saber 11 del año 2013 a nivel municipal y restringirme, adicionamente, a los resultados en colegios públicos.</p> 
 
 <p>Una razón para justificar esta restricción es que la mayoría de los jóvenes colombianos estudian en colegios públicos. En 2013, el Icfes evaluó las competencias de 574.129 estudiantes de último grado de bachillerato. De estos, un 72,3% estudiaba en uno de los 8.338 colegios públicos del país. Otra razón es política: los colegios públicos son una de las principales herramientas de las entidades estatales para promover movilidad social y desarrollo. Su desempeño debería ser una preocupación permanente a todos los niveles del estado, empezando por los municipios.</p>
+
+<p>Si le interesa leer un análisis extenso del estado actual de los colegios públicos y una propuesta seria de transformación del sistema, recomendadísimo <a href="http://www.fundacioncompartir.org/html/queHacemos/Estudio_tras_la_excelencia_docente.html">este informe de la Fundación Compartir</a>.</p>
 
 <h2 id="numeros_y_letras">Números y letras</h2>
 
@@ -84,6 +87,10 @@ layout: reporte
 <p>La lectura detallada de las listas genera nuevas preguntas: la mayoría de los primeros lugares son ocupados por municipios relativamente pequeños en Santander, Nariño, Antioquia y Boyacá. En las listas de los primeros cincuenta municipios sólo hay dos capitales: Tunja y Bucaramanga. Aunque están presentes varios de los municipios periféricos a ciudades grandes donde se encuentran las sedes de los colegios privados de élite como Envigado, Floridablanca y Cajicá (¿transferencia de maestros?), Bogotá ocupa la posición 73 en lenguaje y la 156 en matemática. Medellín por su parte alcanza la posición 81 en lenguaje y la 272 en matemática. ¿Tal vez hay una relación entre altos promedios municipales y bajo número de evaluados? La siguiente gráfica sugiere que la respuesta a esta pregunta es negativa:</p> 
 
 <img src="pics/promedios.mat.evaluados.png">
+
+<p>También para aclarar el panorama conviene revisar la distribución del número de evaluados. Dato clave: la mitad de los municipios del país gradúan 126 estudiantes o menos.</p>
+
+<img src="pics/dist.evaluados.municipios.png">
 
 <p>¿Y qué hay de la pobreza? Tal vez los municipios que ocupan los primeros lugares tienen bajos niveles de pobreza. En la gráfica a continuación comparo <a href="https://www.dnp.gov.co/LinkClick.aspx?fileticket=lXf_K5Q1VZE%3D&tabid=337">la incidencia de pobreza multidimensional</a> (de acuerdo a cálculos de 2005) y el puntaje promedio en lenguaje:
 
