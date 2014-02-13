@@ -13,8 +13,9 @@ layout: reporte
 <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Link</a></li>
-        <li><a href="#">Link</a></li>
+        <li><a href="#los_mas">Listas municipales</a></li>
+        <li><a href="#departamentos">Lista departamental</a></li>
+        <li><a href="#buscador_municipios">Busque su municipio</a></li>
       </ul>
   </div>
 </nav>
