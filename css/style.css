@@ -5,6 +5,9 @@ body{font-family: 'Bitter', serif; color:#555;}
 a {color:#d45500;}
 a:visited {color: #d45500;}
 
+.navbar{margin-bottom: 0;}
+p {margin:0;}
+
 .pie{background-color: #555;
 	color:#f1f1f1;
 	height: 200px;
@@ -14,7 +17,7 @@ a:visited {color: #d45500;}
 #topx{width:80px; display:inline;}
 #fila{display:inline;}
 #titulo-reporte{padding:0;}
-.texto p {font-size:1.2em;}
+.texto p {font-size:1.2em; margin:0 0 10px 0;}
 .texto img {width:100%;}
 .caption{color:#aaa;}
 header {display:block;
