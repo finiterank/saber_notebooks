@@ -10,6 +10,9 @@ layout: reporte
         <li><a href="#departamentos">Lista departamental</a></li>
         <li><a href="#buscador_municipios">Busque su municipio</a></li>
       </ul>
+      <ul class="nav navbar-nav navbar-right">
+      	<li><a href="http://www.finiterank.com/notas/2014/02/12/12-2/">Explicación</a></li>
+      </ul>
   </div>
 </nav>
 
