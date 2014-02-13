@@ -179,7 +179,7 @@ function generateTableLeng() {
             $('.xequals').append(v);
             if(v >20){
             	$('#volver-arriba-tabla').empty();
-            	$('#volver-arriba-tabla').append('<p class="text-right"><small><a href="#arriba-tabla">Volver arriba</a></small></p>');
+            	$('#volver-arriba-tabla').append('<p class="text-right"><small><a href="#los_mas">Volver arriba</a></small></p>');
             }
             else {
             	$('#volver-arriba-tabla').empty();
