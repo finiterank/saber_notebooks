@@ -7,7 +7,7 @@ a:hover{color:#dc7632;}
 a:visited {color: #d45500;}
 
 .navbar{margin-bottom: 0;}
-.descargar{background-color: #555;
+.descargar{background-color: #adadad;
 			color:#eee; margin-top:30px;
 			margin-bottom:30px;
 			padding:15px;
@@ -15,8 +15,8 @@ a:visited {color: #d45500;}
 
 p {margin:0;}
 
-.pie{background-color: #555;
-	color:#f1f1f1;
+.pie{background-color: #adadad;
+	color:#eee;
 	height: 200px;
 	padding-top:30px;
 	margin-top:40px;}
