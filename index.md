@@ -28,6 +28,7 @@ layout: reporte
 <div class="col-md-4 caption">
 	<small>Panorámica de <a href="http://www.launion-narino.gov.co/index.shtml">La Unión, Nariño</a>, el municipio con el mejor promedio en matemática en colegios públicos en 2013.<p class="text-right">(Fuente: <a href="http://commons.wikimedia.org/wiki/File:Vista_de_la_union_nari%C3%B1o.JPG">Wikimedia Commons</a>)</p></small>
 
+<div class="descargar">
 <h4>Descargue los datos</h4>
 <small><p><ul>
   <li><a href="http://www.icfes.gov.co/resultados/saber-11-resultados?id=39">Saber 11 - 2013 (colegios)</a></li>
@@ -35,7 +36,7 @@ layout: reporte
   <li><a href="https://docs.google.com/spreadsheet/ccc?key=0AnK0b1-vFIdcdHR1UjRLaFlTdXBkOGI1V0hlMG5GUWc&usp=sharing">Saber 11 - 2011 (municipios)</a></li>
   <li><a href="https://docs.google.com/spreadsheet/ccc?key=0AnK0b1-vFIdcdHJNQUlyXzRldmMwYms3a3ZJb0NRaWc&usp=sharing">Saber 11 - 2013 (departamentos)</a></li>
   <li><a href="https://docs.google.com/spreadsheet/ccc?key=0AnK0b1-vFIdcdGdBZzNnM0ZST05FY2loaXhDWHBHemc&usp=sharing">Tasa homicidios 2012 y 2013 (municipios)</a></li>
-</ul></p></small></div>
+</ul></p></small></div></div>
 <div class="col-md-8 texto">
 <p>Cada noviembre el ICFES publica <a href="http://www.icfes.gov.co/resultados/saber-11-resultados?id=39">los resultados de las pruebas Saber 11 a nivel de colegios</a>. Basados en esos resultados se divulgan en los medios listas de "los mejores colegios" y se reiteran en columnas de opinión los mismos lamentos sobre la calidad de la educación pública debido a su casi total ausencia en las listas de los primeros cien colegios (en una lista de cerca de doce mil). </p>
 
