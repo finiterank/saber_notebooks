@@ -316,6 +316,36 @@ ggsave("../figure/pobreza.saber.png", plot_pobreza_saber, width=10, height=10)
 ```
 
 ```{r}
+homicidios.df <- read.csv("./data/homicidios2012-2013.csv")
+homicidios.df$delta <- homicidios.df$tasa.homicidios13 - homicidios.df$tasa.homicidios12 
+mezcla.saber.homicidios <- merge(saber2013.municipios.df, homicidios.df, by.x="cod_municipio", by.y="cod.municipio", all.x=T, all.y=F)
+
+plot_homicidios_mat_saber <- ggplot(mezcla.saber.homicidios, aes(x=tasa.homicidios13 , y=promedio.mat)) +
+  geom_point(colour="orange") +
+  geom_smooth(colour="red", method=lm, se=FALSE) +
+  xlab("Tasas de homicidio por cada mil habitantes") +
+  ylab("Promedio municipal en matemática") 
+  #ggtitle("Pobreza y resultados en Saber 11 para colegios públicos") 
+
+plot_homicidios_leng_saber <- ggplot(mezcla.saber.homicidios, aes(x=tasa.homicidios13 , y=promedio.leng)) +
+  geom_point(colour="orange") +
+  geom_smooth(colour="red", method=lm, se=FALSE) +
+  xlab("Tasas de homicidio por cada mil habitantes") +
+  ylab("Promedio municipal en lenguaje") 
+  #ggtitle("Pobreza y resultados en Saber 11 para colegios públicos") 
+
+plot_homicidios_saber <- arrangeGrob(plot_homicidios_mat_saber,plot_homicidios_leng_saber, nrow=2)
+
+ggsave("../figure/homicidios.saber.png", plot_homicidios_saber, width=10, height=10)
+
+```
+
+```{r}
+reghom <- lm(tasa.homicidios13 ~ promedio.leng, data=mezcla.saber.homicidios)
+```
+
+
+```{r}
 nombres.columnas.2011 <- c('Puesto',
              'Colegio',
              'Municipio',
