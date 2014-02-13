@@ -3,6 +3,7 @@
 
 body{font-family: 'Bitter', serif; color:#555;}
 a {color:#d45500;}
+a:hover{color:#dc7632;}
 a:visited {color: #d45500;}
 
 .navbar{margin-bottom: 0;}
