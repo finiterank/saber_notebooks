@@ -22,7 +22,7 @@ layout: reporte
 
 <h2>Una lista diferente: municipios y colegios públicos</h2>
 
-<p>En este pequeño reporte, basado en una idea de Jorge Orlando Melo, quiero concentrarme en los resultados de las pruebas Saber 11 del año 2013 a nivel municipal y restringirme, adicionamente, a los resultados en colegios públicos.</p> 
+<p>En este pequeño reporte, basado en una idea de Jorge Orlando Melo (<a href="http://www.finiterank.com/notas/2014/02/12/12-2/">aquí explico más</a>), quiero concentrarme en los resultados de las pruebas Saber 11 del año 2013 a nivel municipal y restringirme, adicionamente, a los resultados en colegios públicos.</p> 
 
 <p>Una razón para justificar esta restricción es que la mayoría de los jóvenes colombianos estudian en colegios públicos. En 2013, el Icfes evaluó las competencias de 574.129 estudiantes de último grado de bachillerato. De estos, un 72,3% estudiaba en uno de los 8.338 colegios públicos del país. Otra razón es política: los colegios públicos son una de las principales herramientas de las entidades estatales para promover movilidad social y desarrollo. Su desempeño debería ser una preocupación permanente a todos los niveles del estado, empezando por los municipios.</p>
 
@@ -81,7 +81,13 @@ layout: reporte
 
 <p>Por otro lado, no sobra señalar que los municipios que ocupan las primeras dos posiciones en lenguaje tienen incidencia de pobreza de 0,6 (Santa María, Boyacá) y 0,73 (San José de Miranda, Santander). La Unión, Nariño, el primero en matemática, tiene una incidencia de pobreza multidimensional de 0,74.</p>
 
-<p>(En una próxima versión de este documento estudiaré las correlaciones de altos puntajes con niveles de violencia, el otro factor omnipresente en los análisis nacionales por razones obvias.)</p>
+<h2>¡Violencia!</h2>
+
+<p>Varios de los primeros lectores de las tablas propusieron la hipótesis de que los buenos puntajes podrían estar correlacionados con bajos niveles de violencia. Para estudiar esta posibilidad comparé los resultados a nivel municipal en ambas áreas con la tasa de homicidio de 2013, un indicador burdo pero aceptable para medir incidencia de violencias.</p>
+
+<img src="pics/homicidios.saber.png">
+
+<p>La gráfica sugiere una ligerísima correlación negativa (estadísticamente insignificante en el caso de lenguaje, por cierto) entre la tasa de homicidio y el promedio municipal en el examen. Nada concluyente. Hay prácticamente la misma cantidad de malos y buenos puntajes a lo largo de todos los valores de la tasa de homicidios.</p>
 
 <h2>¿Suerte?</h2>
 
