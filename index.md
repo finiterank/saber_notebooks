@@ -99,7 +99,7 @@ layout: reporte
 
 <img src="pics/homicidios.saber.png">
 
-<p>La gráfica sugiere una ligerísima correlación negativa (estadísticamente insignificante en el caso de lenguaje, por cierto) entre la tasa de homicidio y el promedio municipal en el examen. Nada concluyente. Hay prácticamente la misma cantidad de malos y buenos puntajes a lo largo de todos los valores de la tasa de homicidios.</p>
+<p>La gráfica sugiere una ligerísima correlación negativa (estadísticamente insignificante en el caso de lenguaje, por cierto) entre la tasa de homicidio y el promedio municipal en el examen. Nada concluyente.</p>
 
 <h2 id="suerte">¿Suerte?</h2>
 
