@@ -10,7 +10,7 @@ layout: reporte
 </header>
 </div>
 
-<nav class="navbar navbar-default navbar-static-top" role="navigation">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
      <ul class="nav navbar-nav">
         <li class="active"><a href="#">Link</a></li>
