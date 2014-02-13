@@ -95,7 +95,7 @@ layout: reporte
 
 <h2 id="violencia">¡Violencia!</h2>
 
-<p>Varios de los primeros lectores de las tablas propusieron la hipótesis de que los buenos puntajes podrían estar correlacionados con bajos niveles de violencia. Para estudiar esta posibilidad comparé los resultados a nivel municipal en ambas áreas con la tasa de homicidio de 2013, un indicador burdo pero aceptable para medir incidencia de violencias.</p>
+<p>Varios de los primeros lectores de las tablas propusieron la hipótesis de que los buenos puntajes podrían estar correlacionados con bajos niveles de violencia. Para estudiar esta posibilidad comparé los resultados a nivel municipal en ambas áreas con la tasa de homicidio de 2013 (<a href="https://docs.google.com/spreadsheet/ccc?key=0AnK0b1-vFIdcdGdBZzNnM0ZST05FY2loaXhDWHBHemc&usp=sharing">aquí pueden descargarla</a>), un indicador burdo pero aceptable para medir incidencia de violencias.</p>
 
 <img src="pics/homicidios.saber.png">
 
