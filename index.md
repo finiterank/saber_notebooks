@@ -131,7 +131,7 @@ layout: reporte
 <h2 id="buscador_municipios">Busque su municipio</h2>
 <p>Una forma de organizar la lista de municipios tomando en cuenta ambas áreas es calcular el promedio y usarlo como índice. Esta aproximación, sin embargo, requiere primero que los rangos de valores de ambas áreas sean los mismos, de lo contrario valores muy altos o muy bajos en un área como matemática (con un rango amplio) pueden pesar demasiado al promediarlos con los valores de lenguaje (que tiene un rango más angosto).</p>
 
-<p>La siguiente tabla permite navegar la lista de acuerdo al orden de un promedio de puntajes normalizados (transformados para que ocupen el intervalo entre cero y uno). Al elegir un municipio puede ver la posición del municipio, sus puntajes en matemática y lenguaje, el número de estudiantes evaluados y también estos mismos valores para los cinco municipios por encima y por debajo del que eligió.</p>
+<p>La siguiente tabla permite navegar la lista de acuerdo al orden de un promedio de puntajes normalizados (transformados para que ocupen el intervalo entre cero y uno). Al elegir un municipio puede ver la posición del municipio (sobre 1105), sus puntajes en matemática y lenguaje, el número de estudiantes evaluados y también estos mismos valores para los cinco municipios por encima y por debajo del que eligió.</p>
 
 <p>(La tabla completa está disponible para descarga <a href="https://docs.google.com/spreadsheet/ccc?key=0AnK0b1-vFIdcdGk2eDQyRmJGdkk4YnU0X0p5YkMzdVE&usp=sharing">acá</a>.)</p>
 
