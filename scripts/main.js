@@ -211,6 +211,6 @@ $(document).ready(function() {
 	generateTableLeng();
 	generateTable();
 	generateTableDpto();
-	var numerosImpresos = imprimirNumeros(1106);
+	var numerosImpresos = imprimirNumeros(1105);
 	$('#formulario-numeros').append(numerosImpresos);
 });
