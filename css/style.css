@@ -7,6 +7,12 @@ a:hover{color:#dc7632;}
 a:visited {color: #d45500;}
 
 .navbar{margin-bottom: 0;}
+.navbar a{ color: #dc7632;}
+.navbar a:hover{ color:#d45500;}
+.navbar a:visited{ color:#dc7632;}
+
+
+
 .descargar{background-color: #adadad;
 			color:#eee; margin-top:30px;
 			margin-bottom:30px;
