@@ -9,7 +9,8 @@ a:visited {color: #d45500;}
 .descargar{background-color: #555;
 			color:#eee; margin-top:30px;
 			margin-bottom:30px;
-			padding:15px;}
+			padding:15px;
+			border-radius: 5px;}
 
 p {margin:0;}
 
