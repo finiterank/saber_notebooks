@@ -7,9 +7,6 @@ a:hover{color:#dc7632;}
 a:visited {color: #d45500;}
 
 .navbar{margin-bottom: 0;}
-.navbar a{ color: #dc7632;}
-.navbar a:hover{ color:#d45500;}
-.navbar a:visited{ color:#dc7632;}
 
 
 
@@ -18,6 +15,9 @@ a:visited {color: #d45500;}
 			margin-bottom:30px;
 			padding:15px;
 			border-radius: 5px;}
+.descargar a{color:#f2ccb2;}
+.descargar a:hover{color:#f2ccb2;}
+.descargar a:visited{color:#f2ccb2;}
 
 p {margin:0;}
 
