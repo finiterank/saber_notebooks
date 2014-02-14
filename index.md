@@ -28,7 +28,7 @@ layout: reporte
 <div class="col-md-4 caption">
 	<small>Panorámica de <a href="http://www.launion-narino.gov.co/index.shtml">La Unión, Nariño</a>, el municipio con el mejor promedio en matemática en colegios públicos en 2013.<p class="text-right">(Fuente: <a href="http://commons.wikimedia.org/wiki/File:Vista_de_la_union_nari%C3%B1o.JPG">Wikimedia Commons</a>)</p></small>
 
-<div class="descargar">
+<div class="descargar box-shadow">
 <h4>Descargue los datos</h4>
 <small><p><ul>
   <li><a href="http://www.icfes.gov.co/resultados/saber-11-resultados?id=39">Saber 11 - 2013 (colegios)</a></li>
