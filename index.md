@@ -28,7 +28,7 @@ layout: reporte
 <div class="col-md-4 caption">
 	<small>Panorámica de <a href="http://www.launion-narino.gov.co/index.shtml">La Unión, Nariño</a>, el municipio con el mejor promedio en matemática en colegios públicos en 2013.<p class="text-right">(Fuente: <a href="http://commons.wikimedia.org/wiki/File:Vista_de_la_union_nari%C3%B1o.JPG">Wikimedia Commons</a>)</p></small>
 
-<div class="descargar box-shadow">
+<div class="descargar">
 <h4>Descargue los datos</h4>
 <small><p><ul>
   <li><a href="http://www.icfes.gov.co/resultados/saber-11-resultados?id=39">Saber 11 - 2013 (colegios)</a></li>
@@ -143,7 +143,15 @@ layout: reporte
 
 <div class="container">
 <div class="row">
-<div class="col-md-4 caption"><small>Panorámica de <a href="http://santamaria-boyaca.gov.co/index.shtml">Santa María, Boyacá</a> (¿Han notado, por cierto, lo flagrantemente inútiles e innavegables que son la mayoría de los sitios web de los municipios?), el municipio con el mejor promedio en lenguaje en colegios públicos en 2013.<p class="text-right">(Fuente: <a href="http://santamaria-boyaca.gov.co/index.shtml">Alcaldía de Santa María</a>)</p></small></div>
+<div class="col-md-4 caption"><small>Panorámica de <a href="http://santamaria-boyaca.gov.co/index.shtml">Santa María, Boyacá</a> (¿Han notado, por cierto, lo flagrantemente inútiles e innavegables que son la mayoría de los sitios web de los municipios?), el municipio con el mejor promedio en lenguaje en colegios públicos en 2013.<p class="text-right">(Fuente: <a href="http://santamaria-boyaca.gov.co/index.shtml">Alcaldía de Santa María</a>)</p></small>
+
+<div class="descargar" id="derivados">
+<h4>Documentos derivados</h4>
+<small><p><ul>
+  <li><a href="http://www.eltiempo.com/opinion/columnistas/jorgeorlandomelo/a-usar-los-datos-jorge-orlando-melo-columnista-el-tiempo_13491644-4">A usar los datos</a>, por Jorge Orlando Melo</li>
+  <li><a href="http://entrescu.wordpress.com/2014/02/16/risaralda-educada/">¿Risaralda educada?</a>, por Sebastián Sánchez</li>
+</ul></p></small></div>
+</div>
 <div class="col-md-8 texto ">
 <h2 id="buscador_municipios">Busque su municipio</h2>
 <p>Una forma de organizar la lista de municipios tomando en cuenta ambas áreas es calcular el promedio y usarlo como índice. Esta aproximación, sin embargo, requiere primero que los rangos de valores de ambas áreas sean los mismos, de lo contrario valores muy altos o muy bajos en un área como matemática (con un rango amplio) pueden pesar demasiado al promediarlos con los valores de lenguaje (que tiene un rango más angosto).</p>
