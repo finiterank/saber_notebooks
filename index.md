@@ -150,6 +150,7 @@ layout: reporte
 <small><p><ul>
   <li><a href="http://www.eltiempo.com/opinion/columnistas/jorgeorlandomelo/a-usar-los-datos-jorge-orlando-melo-columnista-el-tiempo_13491644-4">A usar los datos</a>, por Jorge Orlando Melo</li>
   <li><a href="http://entrescu.wordpress.com/2014/02/16/risaralda-educada/">¿Risaralda educada?</a>, por Sebastián Sánchez</li>
+  <li><a href="http://paedagogo.blogspot.ca/2014/02/como-saber-quien-es-el-mas-educado.html">¿Cómo saber quién es el más educado?</a>, por Julián Gutiérrez</li>
 </ul></p></small></div>
 </div>
 <div class="col-md-8 texto ">
